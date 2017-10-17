@@ -12,11 +12,15 @@ A prototype iOS application to allow visitors to draw their pain levels.
 
 Total time so far: 3hrs.
 
-### Frameworks
+## Server
+
+A [backend server](https://github.com/MODatUniSA/mod-image-server) will accept the drawings, and play a slideshow of the images.
+
+## Frameworks
 This app is based on the [JotUI framework](https://github.com/adamwulf/JotUI) by [Adam Wulf](http://twitter.com/adamwulf). Thanks so much Adam.
 
 
-### License
+## License
 The [JotUI framework](https://github.com/adamwulf/JotUI) used in this app is provided under the MIT License.
 
 This [MOD.](https://mod.org.au) application is released under the MIT License.
