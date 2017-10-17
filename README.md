@@ -8,6 +8,7 @@ A prototype iOS application to allow visitors to draw their pain levels.
 * Post the image created to a web server.
 * Have that web server generate a slideshow.
 * Create custom brush textures.
+* Augment the images.
 
 Total time so far: 3hrs.
 
