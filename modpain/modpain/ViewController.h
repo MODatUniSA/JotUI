@@ -45,6 +45,8 @@
     IBOutlet UIButton* palmRejectionButton;
 
     IBOutlet UIButton* settingsButton;
+    
+    IBOutlet UIButton* pushToServerButton;
 }
 
 @end

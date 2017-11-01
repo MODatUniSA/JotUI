@@ -184,6 +184,65 @@
     }];
 }
 
+- (IBAction)sendToServer:(id)sender {
+    // Send to server button pressed
+    [jotView exportImageTo:[self jotViewStateInkPath] andThumbnailTo:[self jotViewStateThumbPath] andStateTo:[self jotViewStatePlistPath] withThumbnailScale:1.0 onComplete:^(UIImage* ink, UIImage* thumb, JotViewImmutableState* state) {
+        UIImageWriteToSavedPhotosAlbum(thumb, nil, nil, nil);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // Image saved
+            NSLog(@"Image saved. Sending to server...");
+            [self sendImageToServer: thumb];
+        });
+    }];
+}
+
+- (void)sendImageToServer: (UIImage *) image {
+    // TODO: send UIImage to slideshow server
+    // TODO: FIX HTTPS PROB
+    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://localhost:3000/images"]];
+    
+    NSString *userUpdate =[NSString stringWithFormat:@"image[data]=%@",image, nil];
+    
+    //create the Method "GET" or "POST"
+    [urlRequest setHTTPMethod:@"POST"];
+    
+    //Convert the String to Data
+    NSData *data1 = [userUpdate dataUsingEncoding:NSUTF8StringEncoding];
+    
+    //Apply the data to the body
+    [urlRequest setHTTPBody:data1];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:urlRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+        if(httpResponse.statusCode == 200)
+        {
+            NSError *parseError = nil;
+            NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
+            NSLog(@"The response is - %@",responseDictionary);
+            NSInteger success = [[responseDictionary objectForKey:@"success"] integerValue];
+            if(success == 1)
+            {
+                NSLog(@"Login SUCCESS");
+            }
+            else
+            {
+                NSLog(@"Login FAILURE");
+            }
+        }
+        else
+        {
+            NSLog(@"Error");
+        }
+    }];
+    [dataTask resume];
+    
+    // Let the user know how it's all going.
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"You say push" message:@"I say pushed! Push, pushed! Push, pushed!." preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 - (IBAction)loadImageFromLibary:(UIButton*)sender {
     [[jotView state] setIsForgetful:YES];
     JotViewStateProxy* state = [[JotViewStateProxy alloc] initWithDelegate:self];
