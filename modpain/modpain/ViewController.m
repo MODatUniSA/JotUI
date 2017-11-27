@@ -198,16 +198,19 @@
 
 - (void)sendImageToServer: (UIImage *) image {
     // TODO: send UIImage to slideshow server
-    // TODO: FIX HTTPS PROB
-    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://localhost:3000/images"]];
+    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://192.168.0.192:3000/images"]];
     
-    NSString *userUpdate =[NSString stringWithFormat:@"image[data]=%@",image, nil];
+    // UIImage to data for our server
+    NSData *imageData = UIImagePNGRepresentation(image);
+    NSString *imageDataBase64 = [[imageData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed] stringByReplacingOccurrencesOfString:@"+" withString:@"%2B"];
+    
+    NSString *postBodyData = [NSString stringWithFormat:@"image[ios_data]=%@",imageDataBase64];
     
     //create the Method "GET" or "POST"
     [urlRequest setHTTPMethod:@"POST"];
     
     //Convert the String to Data
-    NSData *data1 = [userUpdate dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *data1 = [postBodyData dataUsingEncoding:NSUTF8StringEncoding];
     
     //Apply the data to the body
     [urlRequest setHTTPBody:data1];
@@ -217,18 +220,22 @@
         NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
         if(httpResponse.statusCode == 200)
         {
-            NSError *parseError = nil;
-            NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
-            NSLog(@"The response is - %@",responseDictionary);
-            NSInteger success = [[responseDictionary objectForKey:@"success"] integerValue];
-            if(success == 1)
-            {
-                NSLog(@"Login SUCCESS");
-            }
-            else
-            {
-                NSLog(@"Login FAILURE");
-            }
+//            NSError *parseError = nil;
+//            NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
+//            NSLog(@"The response is - %@",responseDictionary);
+//            NSInteger success = [[responseDictionary objectForKey:@"success"] integerValue];
+//            if(success == 1)
+//            {
+//                NSLog(@"Login SUCCESS");
+//            }
+//            else
+//            {
+//                NSLog(@"Login FAILURE");
+//            }
+            // Let the user know how it's all going.
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"You say push" message:@"I say pushed! Push, pushed! Push, pushed!." preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil]];
+            [self presentViewController:alert animated:YES completion:nil];
         }
         else
         {
@@ -236,11 +243,6 @@
         }
     }];
     [dataTask resume];
-    
-    // Let the user know how it's all going.
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"You say push" message:@"I say pushed! Push, pushed! Push, pushed!." preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil]];
-    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (IBAction)loadImageFromLibary:(UIButton*)sender {
