@@ -5,10 +5,12 @@ A prototype iOS application to allow visitors to draw their pain levels.
 ## TODO:
 
 * ~~Setup project and get JotUI running~~. (3hrs)
-* Post the image created to a web server.
-* Have that web server generate a slideshow.
+* ~~Post the image created to a web server.~~
+* ~~Have that web server generate a slideshow.~~
+* ~~Augment the images.~~
 * Create custom brush textures.
-* Augment the images.
+* Add an undo/redo button.
+* Make the interface a bit prettier.
 
 Total time so far: 3hrs.
 
