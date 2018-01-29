@@ -5,6 +5,6 @@
       location = "group:JotUI/JotUI.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/simos/Coding/MOD/pain-drawing/JotUI/modpain/modpain.xcodeproj">
+      location = "group:modpain/modpain.xcodeproj">
    </FileRef>
 </Workspace>
