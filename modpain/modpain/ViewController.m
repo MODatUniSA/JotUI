@@ -27,6 +27,18 @@
     eraser = [[Eraser alloc] init];
     marker.color = [redButton backgroundColor];
     pen.color = [blackButton backgroundColor];
+    
+    // Custom MOD. marker default settings
+    pen.minSize = 26.0;
+    pen.maxSize = 50.0;
+    marker.minSize = 26.0;
+    marker.maxSize = 50.0;
+    
+    [penVsMarkerControl setSelectedSegmentIndex:1];
+    [pressureVsVelocityControl setSelectedSegmentIndex:1];
+    
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -184,6 +196,14 @@
     }];
 }
 
+- (IBAction)undoLastEvent:(id)sender {
+    [jotView undo];
+}
+
+- (IBAction)redoLastEvent:(id)sender {
+    [jotView redo];
+}
+
 - (IBAction)sendToServer:(id)sender {
     // Send to server button pressed
     [jotView exportImageTo:[self jotViewStateInkPath] andThumbnailTo:[self jotViewStateThumbPath] andStateTo:[self jotViewStatePlistPath] withThumbnailScale:1.0 onComplete:^(UIImage* ink, UIImage* thumb, JotViewImmutableState* state) {
@@ -198,7 +218,7 @@
 
 - (void)sendImageToServer: (UIImage *) image {
     // TODO: send UIImage to slideshow server
-    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://192.168.0.192:3000/images"]];
+    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://192.168.0.193:3000/images"]];
     
     // UIImage to data for our server
     NSData *imageData = UIImagePNGRepresentation(image);

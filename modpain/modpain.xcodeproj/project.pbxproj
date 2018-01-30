@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0562BBAD1F95920700272B6E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0562BBAC1F95920700272B6E /* Launch Screen.storyboard */; };
+		0586EB22202046A900E7520F /* icons8-forward-arrow-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 0586EB1E202046A800E7520F /* icons8-forward-arrow-100.png */; };
+		0586EB23202046A900E7520F /* icons8-back-arrow-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 0586EB1F202046A800E7520F /* icons8-back-arrow-100.png */; };
+		0586EB24202046A900E7520F /* icons8-waste-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 0586EB20202046A800E7520F /* icons8-waste-100.png */; };
+		0586EB25202046A900E7520F /* icons8-ok-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 0586EB21202046A900E7520F /* icons8-ok-100.png */; };
+		0586EB272020479500E7520F /* icons8-settings-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 0586EB262020479400E7520F /* icons8-settings-100.png */; };
 		05F4311F1F957A2300143B28 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05F4311E1F957A2300143B28 /* Media.xcassets */; };
 		6625FBB1174C219D009CC541 /* Filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 6625FBB0174C219D009CC541 /* Filled.png */; };
 		6645055616EFCD7E00B90511 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 6645055416EFCD7E00B90511 /* check.png */; };
@@ -51,6 +56,11 @@
 
 /* Begin PBXFileReference section */
 		0562BBAC1F95920700272B6E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "modpain/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		0586EB1E202046A800E7520F /* icons8-forward-arrow-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-forward-arrow-100.png"; sourceTree = "<group>"; };
+		0586EB1F202046A800E7520F /* icons8-back-arrow-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-back-arrow-100.png"; sourceTree = "<group>"; };
+		0586EB20202046A800E7520F /* icons8-waste-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-waste-100.png"; sourceTree = "<group>"; };
+		0586EB21202046A900E7520F /* icons8-ok-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-ok-100.png"; sourceTree = "<group>"; };
+		0586EB262020479400E7520F /* icons8-settings-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-settings-100.png"; sourceTree = "<group>"; };
 		05F4311E1F957A2300143B28 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = modpain/Media.xcassets; sourceTree = "<group>"; };
 		6625FBB0174C219D009CC541 /* Filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Filled.png; sourceTree = "<group>"; };
 		6645055416EFCD7E00B90511 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
@@ -158,6 +168,11 @@
 		66AA5F4C169946760046CA26 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0586EB262020479400E7520F /* icons8-settings-100.png */,
+				0586EB1F202046A800E7520F /* icons8-back-arrow-100.png */,
+				0586EB1E202046A800E7520F /* icons8-forward-arrow-100.png */,
+				0586EB21202046A900E7520F /* icons8-ok-100.png */,
+				0586EB20202046A800E7520F /* icons8-waste-100.png */,
 				6645055416EFCD7E00B90511 /* check.png */,
 				6645055516EFCD7E00B90511 /* check@2x.png */,
 				66AA5F4D169946A60046CA26 /* button-reset-ruby.png */,
@@ -316,12 +331,17 @@
 				C56201CE1DDE74C200FF508E /* colorlesspoint.vsh in Resources */,
 				C56201CF1DDE74C200FF508E /* coloredpoint.vsh in Resources */,
 				C56201D01DDE74C200FF508E /* quad.vsh in Resources */,
+				0586EB23202046A900E7520F /* icons8-back-arrow-100.png in Resources */,
 				0562BBAD1F95920700272B6E /* Launch Screen.storyboard in Resources */,
 				C56201D11DDE74C200FF508E /* quad.fsh in Resources */,
+				0586EB22202046A900E7520F /* icons8-forward-arrow-100.png in Resources */,
+				0586EB24202046A900E7520F /* icons8-waste-100.png in Resources */,
 				05F4311F1F957A2300143B28 /* Media.xcassets in Resources */,
+				0586EB272020479500E7520F /* icons8-settings-100.png in Resources */,
 				C56201D21DDE74C200FF508E /* stencil.fsh in Resources */,
 				C56201D31DDE74C200FF508E /* point.fsh in Resources */,
 				66F9215A16734FF000B1F868 /* Default.png in Resources */,
+				0586EB25202046A900E7520F /* icons8-ok-100.png in Resources */,
 				66F9215C16734FF000B1F868 /* Default@2x.png in Resources */,
 				66F9215E16734FF000B1F868 /* Default-568h@2x.png in Resources */,
 				C5E0C8131E04A95900D8E301 /* ViewController~iphone.xib in Resources */,
