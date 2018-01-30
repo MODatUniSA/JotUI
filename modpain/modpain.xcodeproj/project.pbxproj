@@ -13,6 +13,7 @@
 		0586EB24202046A900E7520F /* icons8-waste-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 0586EB20202046A800E7520F /* icons8-waste-100.png */; };
 		0586EB25202046A900E7520F /* icons8-ok-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 0586EB21202046A900E7520F /* icons8-ok-100.png */; };
 		0586EB272020479500E7520F /* icons8-settings-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 0586EB262020479400E7520F /* icons8-settings-100.png */; };
+		0586EB2920204D6000E7520F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0586EB2820204D6000E7520F /* Main.storyboard */; };
 		05F4311F1F957A2300143B28 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05F4311E1F957A2300143B28 /* Media.xcassets */; };
 		6625FBB1174C219D009CC541 /* Filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 6625FBB0174C219D009CC541 /* Filled.png */; };
 		6645055616EFCD7E00B90511 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 6645055416EFCD7E00B90511 /* check.png */; };
@@ -61,6 +62,7 @@
 		0586EB20202046A800E7520F /* icons8-waste-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-waste-100.png"; sourceTree = "<group>"; };
 		0586EB21202046A900E7520F /* icons8-ok-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-ok-100.png"; sourceTree = "<group>"; };
 		0586EB262020479400E7520F /* icons8-settings-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-settings-100.png"; sourceTree = "<group>"; };
+		0586EB2820204D6000E7520F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		05F4311E1F957A2300143B28 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = modpain/Media.xcassets; sourceTree = "<group>"; };
 		6625FBB0174C219D009CC541 /* Filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Filled.png; sourceTree = "<group>"; };
 		6645055416EFCD7E00B90511 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				66F9215716734FF000B1F868 /* AppDelegate.m */,
 				66F9215F16734FF000B1F868 /* ViewController.h */,
 				66F9216016734FF000B1F868 /* ViewController.m */,
+				0586EB2820204D6000E7520F /* Main.storyboard */,
 				66AA5F5D169949A90046CA26 /* ViewController.xib */,
 				C5E0C8121E04A95900D8E301 /* ViewController~iphone.xib */,
 				66910E8516803FA50046EE12 /* Pen Styles */,
@@ -338,6 +341,7 @@
 				0586EB24202046A900E7520F /* icons8-waste-100.png in Resources */,
 				05F4311F1F957A2300143B28 /* Media.xcassets in Resources */,
 				0586EB272020479500E7520F /* icons8-settings-100.png in Resources */,
+				0586EB2920204D6000E7520F /* Main.storyboard in Resources */,
 				C56201D21DDE74C200FF508E /* stencil.fsh in Resources */,
 				C56201D31DDE74C200FF508E /* point.fsh in Resources */,
 				66F9215A16734FF000B1F868 /* Default.png in Resources */,
