@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import <JotUI/JotUI.h>
-
+#import "HelpViewController.h"
 
 @interface ViewController () <JotViewStateProxyDelegate>
 
@@ -42,6 +42,11 @@
                                              selector:@selector(receiveSubmitNotification:)
                                                  name:@"SubmitNotification"
                                                object:nil];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    // Present the help by default at first load
+    [self performSegueWithIdentifier:@"helpSegue" sender:nil];
 }
 
 - (void) receiveSubmitNotification:(NSNotification *) notification {

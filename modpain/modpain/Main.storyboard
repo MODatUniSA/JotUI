@@ -248,7 +248,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="icons8-help-100.png"/>
                                 <connections>
-                                    <segue destination="nku-5w-DQW" kind="presentation" modalPresentationStyle="pageSheet" id="R0S-ZV-6Td">
+                                    <segue destination="nku-5w-DQW" kind="presentation" identifier="helpSegue" modalPresentationStyle="pageSheet" id="R0S-ZV-6Td">
                                         <segue key="commit" inheritsFrom="parent" id="pnB-Os-6F3"/>
                                         <segue key="preview" inheritsFrom="commit" id="8gZ-BO-lo9"/>
                                     </segue>
