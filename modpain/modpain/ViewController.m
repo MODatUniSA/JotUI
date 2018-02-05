@@ -37,8 +37,22 @@
     [penVsMarkerControl setSelectedSegmentIndex:1];
     [pressureVsVelocityControl setSelectedSegmentIndex:1];
     
+    // Set ourselves up for notifications
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveSubmitNotification:)
+                                                 name:@"SubmitNotification"
+                                               object:nil];
+}
+
+- (void) receiveSubmitNotification:(NSNotification *) notification {
     
-    
+    NSDictionary *userInfo = notification.userInfo;
+    BOOL styleTransfer = [[userInfo objectForKey:@"styleTransfer"] boolValue];
+    [self saveImageAndSendWithImageStyleTransfer:styleTransfer];
+}
+
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -206,23 +220,30 @@
 
 - (IBAction)sendToServer:(id)sender {
     // Send to server button pressed
+    
+}
+
+- (void)saveImageAndSendWithImageStyleTransfer:(BOOL)withStyle {
+    // TODO: Do this in the SubmitViewController
     [jotView exportImageTo:[self jotViewStateInkPath] andThumbnailTo:[self jotViewStateThumbPath] andStateTo:[self jotViewStatePlistPath] withThumbnailScale:1.0 onComplete:^(UIImage* ink, UIImage* thumb, JotViewImmutableState* state) {
         UIImageWriteToSavedPhotosAlbum(thumb, nil, nil, nil);
         dispatch_async(dispatch_get_main_queue(), ^{
             // Image saved
             NSLog(@"Image saved. Sending to server...");
-            [self sendImageToServer: thumb];
+            [self sendImageToServer: thumb withStyle: withStyle];
         });
     }];
 }
 
-- (void)sendImageToServer: (UIImage *) image {
-    // TODO: send UIImage to slideshow server
+- (void)sendImageToServer: (UIImage *) image withStyle: (BOOL) styleTransfer {
+    // Send UIImage to slideshow server
     NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://192.168.0.193:3000/images"]];
     
     // UIImage to data for our server
     NSData *imageData = UIImagePNGRepresentation(image);
     NSString *imageDataBase64 = [[imageData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed] stringByReplacingOccurrencesOfString:@"+" withString:@"%2B"];
+    
+    // TODO: Get server to allow no-style-transfer and send it here.
     
     NSString *postBodyData = [NSString stringWithFormat:@"image[ios_data]=%@",imageDataBase64];
     
@@ -253,7 +274,9 @@
 //                NSLog(@"Login FAILURE");
 //            }
             // Let the user know how it's all going.
-            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"You say push" message:@"I say pushed! Push, pushed! Push, pushed!." preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"You say push"
+                                                                           message:@"I say pushed! Push, pushed! Push, pushed!."
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
             [alert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil]];
             [self presentViewController:alert animated:YES completion:nil];
         }
@@ -382,7 +405,7 @@
 
 #pragma mark - UIPopoverControllerDelegate
 
-- (void)popoverControllerDidDismissPopover:(UIPopoverController*)_popoverController {
+- (void)popoverControllerDidDismissPopover:(UIViewController*)_popoverController {
     popoverController = nil;
 }
 

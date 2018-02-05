@@ -19,7 +19,7 @@
     Marker* marker;
     Eraser* eraser;
 
-    UIPopoverController* popoverController;
+    UIViewController* popoverController;
 
     IBOutlet UISegmentedControl* pressureVsVelocityControl;
     IBOutlet UISegmentedControl* penVsMarkerControl;
@@ -48,5 +48,7 @@
     
     IBOutlet UIButton* pushToServerButton;
 }
+
+- (void)saveImageAndSendWithImageStyleTransfer: (BOOL) withStyle;
 
 @end

@@ -30,6 +30,19 @@
     // Or use UnWind Segue if need be
 //    [self performSegueWithIdentifier:@"ViewController" sender:self];
 }
+- (IBAction)TellMeMore:(id)sender {
+    // TODO: Page controller here with more...
+    NSLog(@"TODO: build the page controller...");
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"TODO: 🤓"
+                                                                   message:@"I'll build the full instructional pages once we've given this the green light."
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"COOL" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
 
 /*
 #pragma mark - Navigation

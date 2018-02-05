@@ -18,6 +18,8 @@
 		05481566202829FB00442C26 /* icons8-cancel-filled-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 05481560202829F900442C26 /* icons8-cancel-filled-500.png */; };
 		05481567202829FB00442C26 /* icons8-ok-filled-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 05481561202829FA00442C26 /* icons8-ok-filled-500.png */; };
 		05481568202829FB00442C26 /* icons8-cancel-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 05481562202829FA00442C26 /* icons8-cancel-500.png */; };
+		0548156B202842EB00442C26 /* SubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0548156A202842EB00442C26 /* SubmitViewController.m */; };
+		0548156E2028477E00442C26 /* PermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0548156D2028477E00442C26 /* PermissionViewController.m */; };
 		0562BBAD1F95920700272B6E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0562BBAC1F95920700272B6E /* Launch Screen.storyboard */; };
 		0586EB22202046A900E7520F /* icons8-forward-arrow-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 0586EB1E202046A800E7520F /* icons8-forward-arrow-100.png */; };
 		0586EB23202046A900E7520F /* icons8-back-arrow-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 0586EB1F202046A800E7520F /* icons8-back-arrow-100.png */; };
@@ -79,6 +81,10 @@
 		05481560202829F900442C26 /* icons8-cancel-filled-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-cancel-filled-500.png"; sourceTree = "<group>"; };
 		05481561202829FA00442C26 /* icons8-ok-filled-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-ok-filled-500.png"; sourceTree = "<group>"; };
 		05481562202829FA00442C26 /* icons8-cancel-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-cancel-500.png"; sourceTree = "<group>"; };
+		05481569202842EB00442C26 /* SubmitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubmitViewController.h; sourceTree = "<group>"; };
+		0548156A202842EB00442C26 /* SubmitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubmitViewController.m; sourceTree = "<group>"; };
+		0548156C2028477E00442C26 /* PermissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PermissionViewController.h; sourceTree = "<group>"; };
+		0548156D2028477E00442C26 /* PermissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PermissionViewController.m; sourceTree = "<group>"; };
 		0562BBAC1F95920700272B6E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "modpain/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		0586EB1E202046A800E7520F /* icons8-forward-arrow-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-forward-arrow-100.png"; sourceTree = "<group>"; };
 		0586EB1F202046A800E7520F /* icons8-back-arrow-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-back-arrow-100.png"; sourceTree = "<group>"; };
@@ -262,10 +268,14 @@
 			children = (
 				66F9215616734FF000B1F868 /* AppDelegate.h */,
 				66F9215716734FF000B1F868 /* AppDelegate.m */,
-				66F9215F16734FF000B1F868 /* ViewController.h */,
 				0548155A2027CDF400442C26 /* HelpViewController.h */,
 				0548155B2027CDF400442C26 /* HelpViewController.m */,
+				66F9215F16734FF000B1F868 /* ViewController.h */,
 				66F9216016734FF000B1F868 /* ViewController.m */,
+				0548156C2028477E00442C26 /* PermissionViewController.h */,
+				0548156D2028477E00442C26 /* PermissionViewController.m */,
+				05481569202842EB00442C26 /* SubmitViewController.h */,
+				0548156A202842EB00442C26 /* SubmitViewController.m */,
 				0586EB2820204D6000E7520F /* Main.storyboard */,
 				66AA5F5D169949A90046CA26 /* ViewController.xib */,
 				C5E0C8121E04A95900D8E301 /* ViewController~iphone.xib */,
@@ -421,8 +431,10 @@
 				66F9215816734FF000B1F868 /* AppDelegate.m in Sources */,
 				66F9216116734FF000B1F868 /* ViewController.m in Sources */,
 				66910E8916803FCF0046EE12 /* Pen.m in Sources */,
+				0548156B202842EB00442C26 /* SubmitViewController.m in Sources */,
 				0548155C2027CDF400442C26 /* HelpViewController.m in Sources */,
 				66910E94168043400046EE12 /* Marker.m in Sources */,
+				0548156E2028477E00442C26 /* PermissionViewController.m in Sources */,
 				66AA5F8C169E20420046CA26 /* Eraser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
