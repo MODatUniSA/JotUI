@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		054815532027C87300442C26 /* icons8-info-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 054815522027C87300442C26 /* icons8-info-100.png */; };
+		054815552027C8C600442C26 /* icons8-help-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 054815542027C8C500442C26 /* icons8-help-100.png */; };
+		054815582027CD3200442C26 /* icons8-cancel-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 054815562027CD3100442C26 /* icons8-cancel-100.png */; };
+		054815592027CD3200442C26 /* icons8-cancel-filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 054815572027CD3200442C26 /* icons8-cancel-filled-100.png */; };
+		0548155C2027CDF400442C26 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0548155B2027CDF400442C26 /* HelpViewController.m */; };
+		05481563202829FB00442C26 /* icons8-ok-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 0548155D202829F800442C26 /* icons8-ok-500.png */; };
+		05481564202829FB00442C26 /* icons8-trash-can-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 0548155E202829F800442C26 /* icons8-trash-can-500.png */; };
+		05481565202829FB00442C26 /* icons8-trash-can-filled-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 0548155F202829F900442C26 /* icons8-trash-can-filled-500.png */; };
+		05481566202829FB00442C26 /* icons8-cancel-filled-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 05481560202829F900442C26 /* icons8-cancel-filled-500.png */; };
+		05481567202829FB00442C26 /* icons8-ok-filled-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 05481561202829FA00442C26 /* icons8-ok-filled-500.png */; };
+		05481568202829FB00442C26 /* icons8-cancel-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 05481562202829FA00442C26 /* icons8-cancel-500.png */; };
 		0562BBAD1F95920700272B6E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0562BBAC1F95920700272B6E /* Launch Screen.storyboard */; };
 		0586EB22202046A900E7520F /* icons8-forward-arrow-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 0586EB1E202046A800E7520F /* icons8-forward-arrow-100.png */; };
 		0586EB23202046A900E7520F /* icons8-back-arrow-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 0586EB1F202046A800E7520F /* icons8-back-arrow-100.png */; };
@@ -56,6 +67,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		054815522027C87300442C26 /* icons8-info-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-info-100.png"; sourceTree = "<group>"; };
+		054815542027C8C500442C26 /* icons8-help-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-help-100.png"; sourceTree = "<group>"; };
+		054815562027CD3100442C26 /* icons8-cancel-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-cancel-100.png"; sourceTree = "<group>"; };
+		054815572027CD3200442C26 /* icons8-cancel-filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-cancel-filled-100.png"; sourceTree = "<group>"; };
+		0548155A2027CDF400442C26 /* HelpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		0548155B2027CDF400442C26 /* HelpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		0548155D202829F800442C26 /* icons8-ok-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-ok-500.png"; sourceTree = "<group>"; };
+		0548155E202829F800442C26 /* icons8-trash-can-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-trash-can-500.png"; sourceTree = "<group>"; };
+		0548155F202829F900442C26 /* icons8-trash-can-filled-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-trash-can-filled-500.png"; sourceTree = "<group>"; };
+		05481560202829F900442C26 /* icons8-cancel-filled-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-cancel-filled-500.png"; sourceTree = "<group>"; };
+		05481561202829FA00442C26 /* icons8-ok-filled-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-ok-filled-500.png"; sourceTree = "<group>"; };
+		05481562202829FA00442C26 /* icons8-cancel-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-cancel-500.png"; sourceTree = "<group>"; };
 		0562BBAC1F95920700272B6E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "modpain/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		0586EB1E202046A800E7520F /* icons8-forward-arrow-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-forward-arrow-100.png"; sourceTree = "<group>"; };
 		0586EB1F202046A800E7520F /* icons8-back-arrow-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-back-arrow-100.png"; sourceTree = "<group>"; };
@@ -170,6 +193,16 @@
 		66AA5F4C169946760046CA26 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				05481562202829FA00442C26 /* icons8-cancel-500.png */,
+				05481560202829F900442C26 /* icons8-cancel-filled-500.png */,
+				0548155D202829F800442C26 /* icons8-ok-500.png */,
+				05481561202829FA00442C26 /* icons8-ok-filled-500.png */,
+				0548155E202829F800442C26 /* icons8-trash-can-500.png */,
+				0548155F202829F900442C26 /* icons8-trash-can-filled-500.png */,
+				054815562027CD3100442C26 /* icons8-cancel-100.png */,
+				054815572027CD3200442C26 /* icons8-cancel-filled-100.png */,
+				054815542027C8C500442C26 /* icons8-help-100.png */,
+				054815522027C87300442C26 /* icons8-info-100.png */,
 				0586EB262020479400E7520F /* icons8-settings-100.png */,
 				0586EB1F202046A800E7520F /* icons8-back-arrow-100.png */,
 				0586EB1E202046A800E7520F /* icons8-forward-arrow-100.png */,
@@ -230,6 +263,8 @@
 				66F9215616734FF000B1F868 /* AppDelegate.h */,
 				66F9215716734FF000B1F868 /* AppDelegate.m */,
 				66F9215F16734FF000B1F868 /* ViewController.h */,
+				0548155A2027CDF400442C26 /* HelpViewController.h */,
+				0548155B2027CDF400442C26 /* HelpViewController.m */,
 				66F9216016734FF000B1F868 /* ViewController.m */,
 				0586EB2820204D6000E7520F /* Main.storyboard */,
 				66AA5F5D169949A90046CA26 /* ViewController.xib */,
@@ -331,28 +366,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				66F9215216734FF000B1F868 /* InfoPlist.strings in Resources */,
+				05481564202829FB00442C26 /* icons8-trash-can-500.png in Resources */,
 				C56201CE1DDE74C200FF508E /* colorlesspoint.vsh in Resources */,
 				C56201CF1DDE74C200FF508E /* coloredpoint.vsh in Resources */,
 				C56201D01DDE74C200FF508E /* quad.vsh in Resources */,
+				05481566202829FB00442C26 /* icons8-cancel-filled-500.png in Resources */,
+				05481563202829FB00442C26 /* icons8-ok-500.png in Resources */,
+				05481568202829FB00442C26 /* icons8-cancel-500.png in Resources */,
 				0586EB23202046A900E7520F /* icons8-back-arrow-100.png in Resources */,
 				0562BBAD1F95920700272B6E /* Launch Screen.storyboard in Resources */,
 				C56201D11DDE74C200FF508E /* quad.fsh in Resources */,
 				0586EB22202046A900E7520F /* icons8-forward-arrow-100.png in Resources */,
 				0586EB24202046A900E7520F /* icons8-waste-100.png in Resources */,
+				05481567202829FB00442C26 /* icons8-ok-filled-500.png in Resources */,
 				05F4311F1F957A2300143B28 /* Media.xcassets in Resources */,
 				0586EB272020479500E7520F /* icons8-settings-100.png in Resources */,
 				0586EB2920204D6000E7520F /* Main.storyboard in Resources */,
+				054815582027CD3200442C26 /* icons8-cancel-100.png in Resources */,
 				C56201D21DDE74C200FF508E /* stencil.fsh in Resources */,
 				C56201D31DDE74C200FF508E /* point.fsh in Resources */,
 				66F9215A16734FF000B1F868 /* Default.png in Resources */,
 				0586EB25202046A900E7520F /* icons8-ok-100.png in Resources */,
 				66F9215C16734FF000B1F868 /* Default@2x.png in Resources */,
+				054815532027C87300442C26 /* icons8-info-100.png in Resources */,
 				66F9215E16734FF000B1F868 /* Default-568h@2x.png in Resources */,
 				C5E0C8131E04A95900D8E301 /* ViewController~iphone.xib in Resources */,
 				669B3AC61692C6E300F12F42 /* FadedCircle.png in Resources */,
 				669B3ACB1692CB4C00F12F42 /* Circle.png in Resources */,
 				669B3ACD169378DB00F12F42 /* Square.png in Resources */,
 				66A340221694D3890093E81A /* Rectangle.png in Resources */,
+				054815592027CD3200442C26 /* icons8-cancel-filled-100.png in Resources */,
+				054815552027C8C600442C26 /* icons8-help-100.png in Resources */,
+				05481565202829FB00442C26 /* icons8-trash-can-filled-500.png in Resources */,
 				66AA5F55169946A60046CA26 /* button-reset-ruby.png in Resources */,
 				66AA5F56169946A60046CA26 /* button-reset-ruby@2x.png in Resources */,
 				66AA5F57169946A60046CA26 /* button-reset.png in Resources */,
@@ -376,6 +421,7 @@
 				66F9215816734FF000B1F868 /* AppDelegate.m in Sources */,
 				66F9216116734FF000B1F868 /* ViewController.m in Sources */,
 				66910E8916803FCF0046EE12 /* Pen.m in Sources */,
+				0548155C2027CDF400442C26 /* HelpViewController.m in Sources */,
 				66910E94168043400046EE12 /* Marker.m in Sources */,
 				66AA5F8C169E20420046CA26 /* Eraser.m in Sources */,
 			);

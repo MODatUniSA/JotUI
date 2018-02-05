@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,11 +19,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBg-84-c84">
-                                <rect key="frame" x="954" y="48" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBg-84-c84">
+                                <rect key="frame" x="954" y="50" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cZW-gb-BcV"/>
+                                    <constraint firstAttribute="width" constant="50" id="vEp-UW-Np0"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="icons8-waste-100.png">
+                                <state key="normal" image="icons8-trash-can-500.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -33,26 +37,24 @@
                                     <action selector="clearScreen:" destination="eU2-cL-jCf" eventType="touchUpInside" id="lXI-c6-xY8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edk-sD-0LF">
-                                <rect key="frame" x="20" y="48" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edk-sD-0LF">
+                                <rect key="frame" x="20" y="50" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="5oE-PO-NWy"/>
+                                    <constraint firstAttribute="height" constant="50" id="iED-TN-IRS"/>
+                                </constraints>
                                 <state key="normal" title="Undo" image="icons8-back-arrow-100.png"/>
                                 <connections>
                                     <action selector="undoLastEvent:" destination="eU2-cL-jCf" eventType="touchUpInside" id="lSg-pi-ph6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2s-gR-oRX">
-                                <rect key="frame" x="102" y="48" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Redo" image="icons8-forward-arrow-100.png"/>
-                                <connections>
-                                    <action selector="redoLastEvent:" destination="eU2-cL-jCf" eventType="touchUpInside" id="8sA-o9-bMG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBk-Q8-fYD">
-                                <rect key="frame" x="487" y="48" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="I'm done" image="icons8-ok-100.png"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBk-Q8-fYD">
+                                <rect key="frame" x="462" y="34" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="QeG-Rh-yjX"/>
+                                    <constraint firstAttribute="height" constant="100" id="US2-04-EHd"/>
+                                </constraints>
+                                <state key="normal" title="I'm done" image="icons8-ok-500.png"/>
                                 <connections>
                                     <action selector="sendToServer:" destination="eU2-cL-jCf" eventType="touchUpInside" id="fer-Fz-7LF"/>
                                 </connections>
@@ -293,8 +295,45 @@
                                     <action selector="tappedColorButton:" destination="eU2-cL-jCf" eventType="touchUpInside" id="kHd-Mh-n2N"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLd-LQ-FmY">
+                                <rect key="frame" x="954" y="1296" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="PzL-jF-0r6"/>
+                                    <constraint firstAttribute="width" constant="50" id="mab-ht-oY9"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="icons8-help-100.png"/>
+                                <connections>
+                                    <segue destination="nku-5w-DQW" kind="presentation" modalPresentationStyle="pageSheet" id="R0S-ZV-6Td">
+                                        <segue key="commit" inheritsFrom="parent" id="pnB-Os-6F3"/>
+                                        <segue key="preview" inheritsFrom="commit" id="8gZ-BO-lo9"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2s-gR-oRX">
+                                <rect key="frame" x="100" y="50" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="A6f-5V-v7O"/>
+                                    <constraint firstAttribute="width" constant="50" id="MZb-Yf-zJU"/>
+                                </constraints>
+                                <state key="normal" title="Redo" image="icons8-forward-arrow-100.png"/>
+                                <connections>
+                                    <action selector="redoLastEvent:" destination="eU2-cL-jCf" eventType="touchUpInside" id="8sA-o9-bMG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="edk-sD-0LF" firstAttribute="leading" secondItem="UHn-Bf-nsX" secondAttribute="leading" constant="20" id="5TO-wf-EKo"/>
+                            <constraint firstItem="pBk-Q8-fYD" firstAttribute="centerX" secondItem="e9C-vu-6lz" secondAttribute="centerX" id="645-yh-Abx"/>
+                            <constraint firstItem="pBk-Q8-fYD" firstAttribute="top" secondItem="UHn-Bf-nsX" secondAttribute="top" constant="14" id="Eml-NO-DS9"/>
+                            <constraint firstItem="edk-sD-0LF" firstAttribute="top" secondItem="UHn-Bf-nsX" secondAttribute="top" constant="30" id="HQn-64-JqZ"/>
+                            <constraint firstItem="K2s-gR-oRX" firstAttribute="top" secondItem="UHn-Bf-nsX" secondAttribute="top" constant="30" id="KpE-c9-zrp"/>
+                            <constraint firstItem="UHn-Bf-nsX" firstAttribute="trailing" secondItem="yLd-LQ-FmY" secondAttribute="trailing" constant="20" id="Sqt-qQ-wW5"/>
+                            <constraint firstItem="K2s-gR-oRX" firstAttribute="leading" secondItem="edk-sD-0LF" secondAttribute="trailing" constant="30" id="WWy-Wx-q7z"/>
+                            <constraint firstItem="yBg-84-c84" firstAttribute="top" secondItem="UHn-Bf-nsX" secondAttribute="top" constant="30" id="eJe-m5-p9P"/>
+                            <constraint firstItem="UHn-Bf-nsX" firstAttribute="trailing" secondItem="yBg-84-c84" secondAttribute="trailing" constant="20" id="qvD-q7-MAQ"/>
+                            <constraint firstItem="UHn-Bf-nsX" firstAttribute="bottom" secondItem="yLd-LQ-FmY" secondAttribute="bottom" constant="20" id="suN-MN-tb9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UHn-Bf-nsX"/>
                     </view>
                     <connections>
@@ -317,16 +356,101 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPQ-KQ-ieg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10" y="12"/>
+            <point key="canvasLocation" x="17" y="11"/>
+        </scene>
+        <!--Help View Controller-->
+        <scene sceneID="fAa-uF-F4c">
+            <objects>
+                <viewController id="nku-5w-DQW" customClass="HelpViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FLf-Lg-xjq">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1346"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Draw Your Pain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egH-By-MC4">
+                                <rect key="frame" x="20" y="328" width="984" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="teJ-OI-IKs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🖌😭" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkW-Y3-2TD">
+                                <rect key="frame" x="20" y="170" width="984" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="iwk-HW-9fz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhT-81-JTL">
+                                <rect key="frame" x="914" y="34" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Y7M-MI-WAm"/>
+                                    <constraint firstAttribute="width" constant="75" id="hx3-mC-cnM"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="icons8-cancel-100.png"/>
+                                <connections>
+                                    <action selector="DismissHelpSheet:" destination="nku-5w-DQW" eventType="touchUpInside" id="vPC-TV-kXA"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="BOH-6K-Sif">
+                                <rect key="frame" x="493" y="1231" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This exhibit allows you to draw your pain.  It might give you insights into your beliefs and perception of pain." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2o-Vo-FLb">
+                                <rect key="frame" x="216" y="498" width="592" height="467"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="467" id="Jo8-HI-Os5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xkW-Y3-2TD" firstAttribute="top" secondItem="fGb-6C-OSi" secondAttribute="top" constant="170" id="1Ox-Jg-2Ih"/>
+                            <constraint firstItem="fGb-6C-OSi" firstAttribute="trailing" secondItem="xkW-Y3-2TD" secondAttribute="trailing" constant="20" id="2K6-hP-4Wx"/>
+                            <constraint firstItem="x2o-Vo-FLb" firstAttribute="leading" secondItem="fGb-6C-OSi" secondAttribute="leading" constant="216" id="40q-NH-Qph"/>
+                            <constraint firstItem="fGb-6C-OSi" firstAttribute="trailing" secondItem="egH-By-MC4" secondAttribute="trailing" constant="20" id="8n9-mu-3sS"/>
+                            <constraint firstItem="x2o-Vo-FLb" firstAttribute="top" secondItem="egH-By-MC4" secondAttribute="bottom" constant="90" id="ES6-3i-yUY"/>
+                            <constraint firstItem="fGb-6C-OSi" firstAttribute="trailing" secondItem="x2o-Vo-FLb" secondAttribute="trailing" constant="216" id="Fhg-jK-h4J"/>
+                            <constraint firstItem="XhT-81-JTL" firstAttribute="top" secondItem="fGb-6C-OSi" secondAttribute="top" constant="34" id="Fuz-Fu-bNK"/>
+                            <constraint firstItem="egH-By-MC4" firstAttribute="top" secondItem="xkW-Y3-2TD" secondAttribute="bottom" constant="8" id="HPY-1j-Ab6"/>
+                            <constraint firstItem="xkW-Y3-2TD" firstAttribute="leading" secondItem="fGb-6C-OSi" secondAttribute="leading" constant="20" id="MmF-cH-nP1"/>
+                            <constraint firstItem="egH-By-MC4" firstAttribute="leading" secondItem="fGb-6C-OSi" secondAttribute="leading" constant="20" id="US9-SV-Mhp"/>
+                            <constraint firstItem="fGb-6C-OSi" firstAttribute="trailing" secondItem="XhT-81-JTL" secondAttribute="trailing" constant="35" id="iuN-Fn-o1Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fGb-6C-OSi"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UAv-oz-X6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="695.5078125" y="10.980966325036603"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="c39-eA-SDf">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="kMQ-mZ-lot" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Odq-rO-oTI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1320" y="-63"/>
         </scene>
     </scenes>
     <resources>
         <image name="button-reset-ruby.png" width="40" height="40"/>
         <image name="check.png" width="30" height="30"/>
         <image name="icons8-back-arrow-100.png" width="100" height="100"/>
+        <image name="icons8-cancel-100.png" width="100" height="100"/>
         <image name="icons8-forward-arrow-100.png" width="100" height="100"/>
-        <image name="icons8-ok-100.png" width="100" height="100"/>
+        <image name="icons8-help-100.png" width="100" height="100"/>
+        <image name="icons8-ok-500.png" width="500" height="500"/>
         <image name="icons8-settings-100.png" width="100" height="100"/>
-        <image name="icons8-waste-100.png" width="100" height="100"/>
+        <image name="icons8-trash-can-500.png" width="500" height="500"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="R0S-ZV-6Td"/>
+    </inferredMetricsTieBreakers>
 </document>
