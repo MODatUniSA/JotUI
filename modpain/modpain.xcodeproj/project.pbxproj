@@ -21,6 +21,13 @@
 		0548156B202842EB00442C26 /* SubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0548156A202842EB00442C26 /* SubmitViewController.m */; };
 		0548156E2028477E00442C26 /* PermissionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0548156D2028477E00442C26 /* PermissionViewController.m */; };
 		0562BBAD1F95920700272B6E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0562BBAC1F95920700272B6E /* Launch Screen.storyboard */; };
+		057B0A772043E5A7002080DF /* icons8-settings-white-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 057B0A702043E5A0002080DF /* icons8-settings-white-100.png */; };
+		057B0A782043E5A7002080DF /* icons8-forward-arrow-white-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 057B0A712043E5A2002080DF /* icons8-forward-arrow-white-100.png */; };
+		057B0A792043E5A7002080DF /* icons8-help-white-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 057B0A722043E5A2002080DF /* icons8-help-white-100.png */; };
+		057B0A7A2043E5A7002080DF /* icons8-cancel-white-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 057B0A732043E5A3002080DF /* icons8-cancel-white-500.png */; };
+		057B0A7B2043E5A7002080DF /* icons8-ok-white-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 057B0A742043E5A4002080DF /* icons8-ok-white-500.png */; };
+		057B0A7C2043E5A7002080DF /* icons8-back-arrow-white-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 057B0A752043E5A5002080DF /* icons8-back-arrow-white-100.png */; };
+		057B0A7D2043E5A7002080DF /* icons8-trash-can-white-500.png in Resources */ = {isa = PBXBuildFile; fileRef = 057B0A762043E5A6002080DF /* icons8-trash-can-white-500.png */; };
 		0586EB22202046A900E7520F /* icons8-forward-arrow-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 0586EB1E202046A800E7520F /* icons8-forward-arrow-100.png */; };
 		0586EB23202046A900E7520F /* icons8-back-arrow-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 0586EB1F202046A800E7520F /* icons8-back-arrow-100.png */; };
 		0586EB24202046A900E7520F /* icons8-waste-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 0586EB20202046A800E7520F /* icons8-waste-100.png */; };
@@ -86,6 +93,13 @@
 		0548156C2028477E00442C26 /* PermissionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PermissionViewController.h; sourceTree = "<group>"; };
 		0548156D2028477E00442C26 /* PermissionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PermissionViewController.m; sourceTree = "<group>"; };
 		0562BBAC1F95920700272B6E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "modpain/Launch Screen.storyboard"; sourceTree = "<group>"; };
+		057B0A702043E5A0002080DF /* icons8-settings-white-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-settings-white-100.png"; sourceTree = "<group>"; };
+		057B0A712043E5A2002080DF /* icons8-forward-arrow-white-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-forward-arrow-white-100.png"; sourceTree = "<group>"; };
+		057B0A722043E5A2002080DF /* icons8-help-white-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-help-white-100.png"; sourceTree = "<group>"; };
+		057B0A732043E5A3002080DF /* icons8-cancel-white-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-cancel-white-500.png"; sourceTree = "<group>"; };
+		057B0A742043E5A4002080DF /* icons8-ok-white-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-ok-white-500.png"; sourceTree = "<group>"; };
+		057B0A752043E5A5002080DF /* icons8-back-arrow-white-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-back-arrow-white-100.png"; sourceTree = "<group>"; };
+		057B0A762043E5A6002080DF /* icons8-trash-can-white-500.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-trash-can-white-500.png"; sourceTree = "<group>"; };
 		0586EB1E202046A800E7520F /* icons8-forward-arrow-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-forward-arrow-100.png"; sourceTree = "<group>"; };
 		0586EB1F202046A800E7520F /* icons8-back-arrow-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-back-arrow-100.png"; sourceTree = "<group>"; };
 		0586EB20202046A800E7520F /* icons8-waste-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-waste-100.png"; sourceTree = "<group>"; };
@@ -199,6 +213,13 @@
 		66AA5F4C169946760046CA26 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				057B0A752043E5A5002080DF /* icons8-back-arrow-white-100.png */,
+				057B0A732043E5A3002080DF /* icons8-cancel-white-500.png */,
+				057B0A712043E5A2002080DF /* icons8-forward-arrow-white-100.png */,
+				057B0A722043E5A2002080DF /* icons8-help-white-100.png */,
+				057B0A742043E5A4002080DF /* icons8-ok-white-500.png */,
+				057B0A702043E5A0002080DF /* icons8-settings-white-100.png */,
+				057B0A762043E5A6002080DF /* icons8-trash-can-white-500.png */,
 				05481562202829FA00442C26 /* icons8-cancel-500.png */,
 				05481560202829F900442C26 /* icons8-cancel-filled-500.png */,
 				0548155D202829F800442C26 /* icons8-ok-500.png */,
@@ -399,13 +420,19 @@
 				0586EB25202046A900E7520F /* icons8-ok-100.png in Resources */,
 				66F9215C16734FF000B1F868 /* Default@2x.png in Resources */,
 				054815532027C87300442C26 /* icons8-info-100.png in Resources */,
+				057B0A7C2043E5A7002080DF /* icons8-back-arrow-white-100.png in Resources */,
 				66F9215E16734FF000B1F868 /* Default-568h@2x.png in Resources */,
 				C5E0C8131E04A95900D8E301 /* ViewController~iphone.xib in Resources */,
 				669B3AC61692C6E300F12F42 /* FadedCircle.png in Resources */,
+				057B0A792043E5A7002080DF /* icons8-help-white-100.png in Resources */,
+				057B0A7B2043E5A7002080DF /* icons8-ok-white-500.png in Resources */,
 				669B3ACB1692CB4C00F12F42 /* Circle.png in Resources */,
+				057B0A7D2043E5A7002080DF /* icons8-trash-can-white-500.png in Resources */,
+				057B0A7A2043E5A7002080DF /* icons8-cancel-white-500.png in Resources */,
 				669B3ACD169378DB00F12F42 /* Square.png in Resources */,
 				66A340221694D3890093E81A /* Rectangle.png in Resources */,
 				054815592027CD3200442C26 /* icons8-cancel-filled-100.png in Resources */,
+				057B0A782043E5A7002080DF /* icons8-forward-arrow-white-100.png in Resources */,
 				054815552027C8C600442C26 /* icons8-help-100.png in Resources */,
 				05481565202829FB00442C26 /* icons8-trash-can-filled-500.png in Resources */,
 				66AA5F55169946A60046CA26 /* button-reset-ruby.png in Resources */,
@@ -413,6 +440,7 @@
 				66AA5F57169946A60046CA26 /* button-reset.png in Resources */,
 				66AA5F59169946A60046CA26 /* button-reset@2x.png in Resources */,
 				66AA5F5E169949AA0046CA26 /* ViewController.xib in Resources */,
+				057B0A772043E5A7002080DF /* icons8-settings-white-100.png in Resources */,
 				C584F8351C37C4AB00413840 /* Particle.png in Resources */,
 				6645055616EFCD7E00B90511 /* check.png in Resources */,
 				6645055716EFCD7E00B90511 /* check@2x.png in Resources */,

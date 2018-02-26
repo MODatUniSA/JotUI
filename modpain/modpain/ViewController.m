@@ -242,7 +242,7 @@
 
 - (void)sendImageToServer: (UIImage *) image withStyle: (BOOL) styleTransfer {
     // Send UIImage to slideshow server
-    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://192.168.0.193:3000/images"]];
+    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://10.220.42.207:3000/images"]];
     
     // UIImage to data for our server
     NSData *imageData = UIImagePNGRepresentation(image);
@@ -279,8 +279,9 @@
 //                NSLog(@"Login FAILURE");
 //            }
             // Let the user know how it's all going.
-            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"You say push"
-                                                                           message:@"I say pushed! Push, pushed! Push, pushed!."
+            // TODO: Send a proper Notification to the view saying it's all done.
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Look up!"
+                                                                           message:@"Your image is ready."
                                                                     preferredStyle:UIAlertControllerStyleAlert];
             [alert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil]];
             [self presentViewController:alert animated:YES completion:nil];
