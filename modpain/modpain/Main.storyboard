@@ -373,7 +373,7 @@
                                     <constraint firstAttribute="height" constant="80" id="teJ-OI-IKs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="80"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This exhibit allows you to draw your pain.  It might give you insights into your beliefs and perception of pain." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2o-Vo-FLb">
@@ -382,7 +382,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="467" id="Jo8-HI-Os5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🖌😭" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkW-Y3-2TD">
@@ -400,7 +400,7 @@
                                     <constraint firstAttribute="height" constant="75" id="Y7M-MI-WAm"/>
                                     <constraint firstAttribute="width" constant="75" id="hx3-mC-cnM"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="icons8-cancel-100.png"/>
+                                <state key="normal" title="Button" image="icons8-cancel-white-500.png"/>
                                 <connections>
                                     <action selector="DismissHelpSheet:" destination="nku-5w-DQW" eventType="touchUpInside" id="vPC-TV-kXA"/>
                                 </connections>
@@ -433,7 +433,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="4jX-jG-5NT" secondAttribute="trailing" constant="8" id="I4g-7D-p1E"/>
                                     <constraint firstAttribute="height" constant="130" id="ML5-8a-GLw"/>
@@ -443,7 +442,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xkW-Y3-2TD" firstAttribute="top" secondItem="fGb-6C-OSi" secondAttribute="top" constant="170" id="1Ox-Jg-2Ih"/>
                             <constraint firstItem="fGb-6C-OSi" firstAttribute="trailing" secondItem="xkW-Y3-2TD" secondAttribute="trailing" constant="20" id="2K6-hP-4Wx"/>
@@ -481,7 +480,7 @@
                                     <constraint firstAttribute="height" constant="80" id="Sx0-2V-sUt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="80"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can MOD. please project your image in our gallery?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhp-k4-Qu4">
@@ -490,7 +489,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="191" id="0Mb-DO-JeZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2e-4d-4Ug">
@@ -508,7 +507,7 @@
                                     <constraint firstAttribute="height" constant="75" id="acj-uE-Ip6"/>
                                     <constraint firstAttribute="width" constant="75" id="ve8-wJ-YhK"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="icons8-cancel-100.png"/>
+                                <state key="normal" title="Button" image="icons8-cancel-white-500.png"/>
                                 <connections>
                                     <action selector="DismissPermissionPage:" destination="skz-rk-LF7" eventType="touchUpInside" id="ULq-Vt-9St"/>
                                 </connections>
@@ -542,7 +541,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="B9V-TF-li5"/>
                                     <constraint firstItem="5sB-Gg-RDm" firstAttribute="centerY" secondItem="ebA-VD-7xa" secondAttribute="centerY" id="O9R-bI-qCF"/>
@@ -557,11 +555,11 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="191" id="3El-NQ-Nc7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="VgW-YW-VL5" firstAttribute="trailing" secondItem="wKc-Oh-nPl" secondAttribute="trailing" constant="301" id="04V-oO-MEt"/>
                             <constraint firstItem="wKc-Oh-nPl" firstAttribute="top" secondItem="ebA-VD-7xa" secondAttribute="bottom" constant="50" id="Dyq-3f-D46"/>
@@ -602,7 +600,7 @@
                                     <constraint firstAttribute="height" constant="100" id="GDb-qp-laR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="80"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you want a computer to augment your pain drawing?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wl6-vX-lgK">
@@ -611,7 +609,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="191" id="MYQ-lh-I6m"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤓" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfh-jd-6LH">
@@ -629,7 +627,7 @@
                                     <constraint firstAttribute="width" constant="75" id="DGT-IZ-Zzm"/>
                                     <constraint firstAttribute="height" constant="75" id="bnK-eN-dKk"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="icons8-cancel-100.png"/>
+                                <state key="normal" title="Button" image="icons8-cancel-white-500.png"/>
                                 <connections>
                                     <action selector="DismissSubmitPage:" destination="ISg-8B-gD6" eventType="touchUpInside" id="5UP-q2-YJw"/>
                                 </connections>
@@ -662,7 +660,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="6Dd-gZ-txI"/>
                                     <constraint firstItem="rdB-cJ-gsG" firstAttribute="leading" secondItem="TmI-D3-Oxb" secondAttribute="leading" constant="8" id="ISe-AW-nFU"/>
@@ -672,7 +669,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Yfh-jd-6LH" firstAttribute="top" secondItem="HzC-xZ-0cr" secondAttribute="top" constant="170" id="FCX-lE-1A7"/>
                             <constraint firstItem="TmI-D3-Oxb" firstAttribute="top" secondItem="wl6-vX-lgK" secondAttribute="bottom" constant="68" id="IdL-Vw-3hl"/>
@@ -707,7 +704,7 @@
         <image name="button-reset-ruby.png" width="40" height="40"/>
         <image name="check.png" width="30" height="30"/>
         <image name="icons8-back-arrow-white-100.png" width="100" height="100"/>
-        <image name="icons8-cancel-100.png" width="100" height="100"/>
+        <image name="icons8-cancel-white-500.png" width="500" height="500"/>
         <image name="icons8-forward-arrow-white-100.png" width="100" height="100"/>
         <image name="icons8-help-white-100.png" width="100" height="100"/>
         <image name="icons8-ok-white-500.png" width="500" height="500"/>
