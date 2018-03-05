@@ -18,6 +18,7 @@
     Pen* pen;
     Marker* marker;
     Eraser* eraser;
+    BOOL textureActive;
 
     UIViewController* popoverController;
 
@@ -47,6 +48,7 @@
     IBOutlet UIButton* settingsButton;
     
     IBOutlet UIButton* pushToServerButton;
+    IBOutlet UIButton* textureToggleButton;
 }
 
 - (void)saveImageAndSendWithImageStyleTransfer: (BOOL) withStyle;

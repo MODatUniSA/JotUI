@@ -321,6 +321,14 @@
                                     <action selector="tappedColorButton:" destination="eU2-cL-jCf" eventType="touchUpInside" id="kHd-Mh-n2N"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9h-JJ-kpL">
+                                <rect key="frame" x="723" y="1306" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Texture off"/>
+                                <connections>
+                                    <action selector="toggleTexture:" destination="eU2-cL-jCf" eventType="touchUpInside" id="AF4-BM-z7B"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -353,11 +361,12 @@
                         <outlet property="penVsMarkerControl" destination="Qy1-S0-f39" id="GlI-Tz-ybx"/>
                         <outlet property="pressureVsVelocityControl" destination="6Kc-7M-jc1" id="MRM-gK-4UO"/>
                         <outlet property="redButton" destination="DYz-J1-Sgt" id="Vio-TN-vfI"/>
+                        <outlet property="textureToggleButton" destination="k9h-JJ-kpL" id="tZq-MB-Bw1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPQ-KQ-ieg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17" y="11"/>
+            <point key="canvasLocation" x="16.9921875" y="10.980966325036603"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="fAa-uF-F4c">

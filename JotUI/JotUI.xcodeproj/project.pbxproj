@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05343628204CED6F00B666BE /* charcoal.png in Resources */ = {isa = PBXBuildFile; fileRef = 05343627204CED6F00B666BE /* charcoal.png */; };
 		66018A4819F61F4400228A0D /* DeleteAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 66018A4719F61F4400228A0D /* DeleteAssets.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6658ABD01A7B1A1F00F32506 /* JotGLLayerBackedFrameBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6658ABCE1A7B1A1F00F32506 /* JotGLLayerBackedFrameBuffer.h */; };
 		6658ABD11A7B1A1F00F32506 /* JotGLLayerBackedFrameBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6658ABCF1A7B1A1F00F32506 /* JotGLLayerBackedFrameBuffer.m */; };
@@ -123,6 +124,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05343627204CED6F00B666BE /* charcoal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = charcoal.png; sourceTree = "<group>"; };
 		66018A4719F61F4400228A0D /* DeleteAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteAssets.h; sourceTree = "<group>"; };
 		6622F9D11774E72400C06825 /* JotViewState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JotViewState.h; sourceTree = "<group>"; };
 		6622F9D21774E72400C06825 /* JotViewState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JotViewState.m; sourceTree = "<group>"; };
@@ -491,6 +493,7 @@
 				C518C8791C841E5500F1895C /* JotHighlighterBrushTexture.m */,
 				C518C8741C841C1B00F1895C /* UIImage+BrushTextures.h */,
 				C518C8751C841C1B00F1895C /* UIImage+BrushTextures.m */,
+				05343627204CED6F00B666BE /* charcoal.png */,
 			);
 			name = "Brush Texture";
 			sourceTree = "<group>";
@@ -686,6 +689,7 @@
 				C53F80911D6FE73E00BA9A58 /* quad.vsh in Resources */,
 				C53F80901D6FE73E00BA9A58 /* coloredpoint.vsh in Resources */,
 				C53F80931D6FE73E00BA9A58 /* stencil.fsh in Resources */,
+				05343628204CED6F00B666BE /* charcoal.png in Resources */,
 				C518C87D1C841F0700F1895C /* highlighter.png in Resources */,
 				C53F80921D6FE73E00BA9A58 /* quad.fsh in Resources */,
 				C53F808F1D6FE73E00BA9A58 /* colorlesspoint.vsh in Resources */,

@@ -89,7 +89,10 @@ static JotHighlighterBrushTexture* _instance = nil;
     JotSharedBrushTexture* texture = [currContext.contextProperties objectForKey:@"highlighterTexture"];
     if (!texture) {
         NSBundle* bundle = [NSBundle bundleForClass:[JotView class]];
-        UIImage* highlighter = [UIImage imageWithContentsOfFile:[bundle pathForResource:@"highlighter" ofType:@"png"]];
+        // Original highlighter texture
+//        UIImage* highlighter = [UIImage imageWithContentsOfFile:[bundle pathForResource:@"highlighter" ofType:@"png"]];
+        // Jamming in the charcoal texture just to check it works.
+        UIImage* highlighter = [UIImage imageWithContentsOfFile:[bundle pathForResource:@"charcoal" ofType:@"png"]];
         texture = [[JotSharedBrushTexture alloc] initWithImage:highlighter];
         [currContext.contextProperties setObject:texture forKey:@"highlighterTexture"];
     }

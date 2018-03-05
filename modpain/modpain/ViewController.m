@@ -27,6 +27,7 @@
     eraser = [[Eraser alloc] init];
     marker.color = [redButton backgroundColor];
     pen.color = [blackButton backgroundColor];
+    textureActive = false;
     
     // Custom MOD. marker default settings
     pen.minSize = 26.0;
@@ -37,7 +38,7 @@
     [penVsMarkerControl setSelectedSegmentIndex:1];
     [pressureVsVelocityControl setSelectedSegmentIndex:1];
     
-    // Set ourselves up for notifications
+    // Set ourselves up for notifications when the users submission has happened.
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveSubmitNotification:)
                                                  name:@"SubmitNotification"
@@ -214,6 +215,15 @@
         });
     }];
 }
+- (IBAction)toggleTexture:(id)sender {
+    if (textureActive) {
+        textureActive = false;
+        [textureToggleButton setTitle:@"Texture off" forState:UIControlStateNormal];
+    } else {
+        textureActive = true;
+        [textureToggleButton setTitle:@"Texture on" forState:UIControlStateNormal];
+    }
+}
 
 - (IBAction)undoLastEvent:(id)sender {
     [jotView undo];
@@ -242,7 +252,7 @@
 
 - (void)sendImageToServer: (UIImage *) image withStyle: (BOOL) styleTransfer {
     // Send UIImage to slideshow server
-    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://10.220.42.207:3000/images"]];
+    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://10.220.171.72:3000/images"]];
     
     // UIImage to data for our server
     NSData *imageData = UIImagePNGRepresentation(image);
@@ -355,7 +365,11 @@
 #pragma mark - JotViewDelegate
 
 - (JotBrushTexture*)textureForStroke {
-    return [[self activePen] textureForStroke];
+    if (textureActive) {
+        return [JotHighlighterBrushTexture sharedInstance];
+    } else {
+        return [[self activePen] textureForStroke];
+    }
 }
 
 - (CGFloat)stepWidthForStroke {
