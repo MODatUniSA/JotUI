@@ -16,7 +16,7 @@ A prototype iOS application to allow visitors to draw their pain levels.
 
 A [backend server](https://github.com/MODatUniSA/mod-image-server) will accept the drawings, and play a slideshow of the images.
 
-A [deep dream server](https://github.com/MODatUniSA/mod-fast-style-transfer) to augment the images using CNN style transfer.
+A [style transfer server](https://github.com/MODatUniSA/mod-fast-style-transfer) to augment the images using CNN style transfer.
 
 ## Frameworks
 This app is based on the [JotUI framework](https://github.com/adamwulf/JotUI) by [Adam Wulf](http://twitter.com/adamwulf). Thanks so much Adam.
