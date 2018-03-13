@@ -27,7 +27,8 @@
     eraser = [[Eraser alloc] init];
     marker.color = [redButton backgroundColor];
     pen.color = [blackButton backgroundColor];
-    textureActive = false;
+    textureActive = true;
+    [textureToggleButton setTitle:@"Texture on" forState:UIControlStateNormal];
     
     // Custom MOD. marker default settings
     pen.minSize = 26.0;
@@ -289,16 +290,24 @@
 //                NSLog(@"Login FAILURE");
 //            }
             // Let the user know how it's all going.
-            // TODO: Send a proper Notification to the view saying it's all done.
-            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Look up!"
-                                                                           message:@"Your image is ready."
-                                                                    preferredStyle:UIAlertControllerStyleAlert];
-            [alert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil]];
-            [self presentViewController:alert animated:YES completion:nil];
+//            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Look up!"
+//                                                                           message:@"Your image is ready."
+//                                                                    preferredStyle:UIAlertControllerStyleAlert];
+//            [alert addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil]];
+//            [self presentViewController:alert animated:YES completion:nil];
+            
+            // Send a proper Notification to the view saying it's all done.
+            NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:1] forKey:@"complete"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:
+             @"ProcessingCompleteNotification" object:nil userInfo:userInfo];
         }
         else
         {
             NSLog(@"Error");
+            // Send an error notification
+            NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:0] forKey:@"complete"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:
+             @"ProcessingCompleteNotification" object:nil userInfo:userInfo];
         }
     }];
     [dataTask resume];

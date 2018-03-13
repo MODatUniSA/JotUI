@@ -23,12 +23,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)dismissModalStack {
+    UIViewController *vc = self.presentingViewController;
+    while (vc.presentingViewController) {
+        vc = vc.presentingViewController;
+    }
+    [vc dismissViewControllerAnimated:YES completion:NULL];
+}
+
 - (IBAction)DismissHelpSheet:(UIStoryboardSegue *)unwindSegue {
-    // Did it work?
-    NSLog(@"Did it work?");
-    [self dismissViewControllerAnimated:YES completion:nil];
-    // Or use UnWind Segue if need be
-//    [self performSegueWithIdentifier:@"ViewController" sender:self];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissModalStack];
 }
 - (IBAction)TellMeMore:(id)sender {
     // TODO: Page controller here with more...

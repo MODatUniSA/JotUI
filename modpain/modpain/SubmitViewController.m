@@ -17,14 +17,52 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // Set ourselves up for notifications when the users submission has happened.
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveCompleteNotification:)
+                                                 name:@"ProcessingCompleteNotification"
+                                               object:nil];
+}
+
+- (void) receiveCompleteNotification:(NSNotification *) notification {
+    
+    NSDictionary *userInfo = notification.userInfo;
+    BOOL complete = [[userInfo objectForKey:@"complete"] boolValue];
+    // Dismiss loading notification
+    if (complete) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.submitPageTitle setText:@"Finished!"];
+            [self.submitPageBodyText setText:@"Your image has been submitted to be reviewed! Thank you."];
+        });
+    } else {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.submitPageTitle setText:@"Oops!"];
+            [self.submitPageBodyText setText:@"Something went wrong, please let a MOD. team member know."];
+        });
+    }
+}
+
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)dismissModalStack {
+    UIViewController *vc = self.presentingViewController;
+    while (vc.presentingViewController) {
+        vc = vc.presentingViewController;
+    }
+    [vc dismissViewControllerAnimated:YES completion:NULL];
+}
+
 - (IBAction)DismissSubmitPage:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissModalStack];
 }
 - (IBAction)NoImageStyleTransfer:(id)sender {
     // COOL COOL, just send the raw image
