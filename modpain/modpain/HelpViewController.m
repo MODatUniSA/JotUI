@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // Help pages are saved in the Media.xcassets as PDFs
+    // They also need to be added to the project first, so you can drag them to Media assets
+    _pageImages = @[@"helpPage1", @"helpPage2", @"helpPage3"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,17 +41,70 @@
     [self dismissModalStack];
 }
 - (IBAction)TellMeMore:(id)sender {
-    // TODO: Page controller here with more...
-    NSLog(@"TODO: build the page controller...");
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"TODO: 🤓"
-                                                                   message:@"I'll build the full instructional pages once we've given this the green light."
-                                                            preferredStyle:UIAlertControllerStyleAlert];
+    // Create page view controller with three help pages
+    self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
+    self.pageViewController.dataSource = self;
     
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"COOL" style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * action) {}];
+    PageContentViewController *startingViewController = [self viewControllerAtIndex:0];
+    NSArray *viewControllers = @[startingViewController];
+    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
     
-    [alert addAction:defaultAction];
-    [self presentViewController:alert animated:YES completion:nil];
+    // Change the size of page view controller
+    self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 30);
+    
+    [self addChildViewController:_pageViewController];
+    // TODO: add animation?
+    [self.view addSubview:_pageViewController.view];
+    [self.pageViewController didMoveToParentViewController:self];
+}
+
+#pragma mark - Page View Controller Data Source
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
+{
+    NSUInteger index = ((PageContentViewController*) viewController).pageIndex;
+    
+    if ((index == 0) || (index == NSNotFound)) {
+        return nil;
+    }
+    
+    index--;
+    return [self viewControllerAtIndex:index];
+}
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
+{
+    NSUInteger index = ((PageContentViewController*) viewController).pageIndex;
+    
+    if (index == NSNotFound) {
+        return nil;
+    }
+    
+    index++;
+    if (index == [self.pageImages count]) {
+        return nil;
+    }
+    return [self viewControllerAtIndex:index];
+}
+
+- (PageContentViewController *)viewControllerAtIndex:(NSUInteger)index
+{
+    // Create a new view controller and pass suitable data.
+    PageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
+    pageContentViewController.imageFile = self.pageImages[index];
+    pageContentViewController.pageIndex = index;
+    
+    return pageContentViewController;
+}
+
+- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
+{
+    return [self.pageImages count];
+}
+
+- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
+{
+    return 0;
 }
 
 /*

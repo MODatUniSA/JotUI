@@ -15,6 +15,10 @@
 		053AEEDA2060CE1A00B0AB6E /* icons8-paint-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 053AEED22060CE1900B0AB6E /* icons8-paint-100.png */; };
 		053AEEDB2060CE1A00B0AB6E /* icons8-paint-filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 053AEED32060CE1900B0AB6E /* icons8-paint-filled-100.png */; };
 		053AEEDC2060CE1A00B0AB6E /* icons8-paint-brush-100-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 053AEED42060CE1A00B0AB6E /* icons8-paint-brush-100-white.png */; };
+		053AEEDF2060D81C00B0AB6E /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 053AEEDE2060D81C00B0AB6E /* PageContentViewController.m */; };
+		053AEEE5206139B900B0AB6E /* helpPage1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 053AEEE4206139B800B0AB6E /* helpPage1.pdf */; };
+		053AEEE820613E7800B0AB6E /* helpPage2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 053AEEE620613E7700B0AB6E /* helpPage2.pdf */; };
+		053AEEE920613E7800B0AB6E /* helpPage3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 053AEEE720613E7700B0AB6E /* helpPage3.pdf */; };
 		054815532027C87300442C26 /* icons8-info-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 054815522027C87300442C26 /* icons8-info-100.png */; };
 		054815552027C8C600442C26 /* icons8-help-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 054815542027C8C500442C26 /* icons8-help-100.png */; };
 		054815582027CD3200442C26 /* icons8-cancel-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 054815562027CD3100442C26 /* icons8-cancel-100.png */; };
@@ -95,6 +99,11 @@
 		053AEED22060CE1900B0AB6E /* icons8-paint-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-paint-100.png"; sourceTree = "<group>"; };
 		053AEED32060CE1900B0AB6E /* icons8-paint-filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-paint-filled-100.png"; sourceTree = "<group>"; };
 		053AEED42060CE1A00B0AB6E /* icons8-paint-brush-100-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-paint-brush-100-white.png"; sourceTree = "<group>"; };
+		053AEEDD2060D81C00B0AB6E /* PageContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
+		053AEEDE2060D81C00B0AB6E /* PageContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		053AEEE4206139B800B0AB6E /* helpPage1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = helpPage1.pdf; sourceTree = "<group>"; };
+		053AEEE620613E7700B0AB6E /* helpPage2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = helpPage2.pdf; sourceTree = "<group>"; };
+		053AEEE720613E7700B0AB6E /* helpPage3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = helpPage3.pdf; sourceTree = "<group>"; };
 		054815522027C87300442C26 /* icons8-info-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-info-100.png"; sourceTree = "<group>"; };
 		054815542027C8C500442C26 /* icons8-help-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-help-100.png"; sourceTree = "<group>"; };
 		054815562027CD3100442C26 /* icons8-cancel-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-cancel-100.png"; sourceTree = "<group>"; };
@@ -244,6 +253,9 @@
 		66AA5F4C169946760046CA26 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				053AEEE4206139B800B0AB6E /* helpPage1.pdf */,
+				053AEEE620613E7700B0AB6E /* helpPage2.pdf */,
+				053AEEE720613E7700B0AB6E /* helpPage3.pdf */,
 				053AEED02060CE1800B0AB6E /* icons8-paint-100-white.png */,
 				053AEED22060CE1900B0AB6E /* icons8-paint-100.png */,
 				053AEED42060CE1A00B0AB6E /* icons8-paint-brush-100-white.png */,
@@ -337,6 +349,8 @@
 				0548156D2028477E00442C26 /* PermissionViewController.m */,
 				05481569202842EB00442C26 /* SubmitViewController.h */,
 				0548156A202842EB00442C26 /* SubmitViewController.m */,
+				053AEEDD2060D81C00B0AB6E /* PageContentViewController.h */,
+				053AEEDE2060D81C00B0AB6E /* PageContentViewController.m */,
 				0586EB2820204D6000E7520F /* Main.storyboard */,
 				66AA5F5D169949A90046CA26 /* ViewController.xib */,
 				C5E0C8121E04A95900D8E301 /* ViewController~iphone.xib */,
@@ -447,8 +461,10 @@
 				05481563202829FB00442C26 /* icons8-ok-500.png in Resources */,
 				05E812112057A11800BA6F97 /* Linotype - Neue Haas Grotesk Display Pro 55 Roman.ttf in Resources */,
 				05481568202829FB00442C26 /* icons8-cancel-500.png in Resources */,
+				053AEEE5206139B900B0AB6E /* helpPage1.pdf in Resources */,
 				0586EB23202046A900E7520F /* icons8-back-arrow-100.png in Resources */,
 				0562BBAD1F95920700272B6E /* Launch Screen.storyboard in Resources */,
+				053AEEE820613E7800B0AB6E /* helpPage2.pdf in Resources */,
 				C56201D11DDE74C200FF508E /* quad.fsh in Resources */,
 				0586EB22202046A900E7520F /* icons8-forward-arrow-100.png in Resources */,
 				053AEED82060CE1A00B0AB6E /* icons8-paint-100-white.png in Resources */,
@@ -487,6 +503,7 @@
 				05481565202829FB00442C26 /* icons8-trash-can-filled-500.png in Resources */,
 				66AA5F55169946A60046CA26 /* button-reset-ruby.png in Resources */,
 				66AA5F56169946A60046CA26 /* button-reset-ruby@2x.png in Resources */,
+				053AEEE920613E7800B0AB6E /* helpPage3.pdf in Resources */,
 				053AEED92060CE1A00B0AB6E /* icons8-paint-filled-100-white.png in Resources */,
 				66AA5F57169946A60046CA26 /* button-reset.png in Resources */,
 				66AA5F59169946A60046CA26 /* button-reset@2x.png in Resources */,
@@ -514,6 +531,7 @@
 				0548156B202842EB00442C26 /* SubmitViewController.m in Sources */,
 				0548155C2027CDF400442C26 /* HelpViewController.m in Sources */,
 				66910E94168043400046EE12 /* Marker.m in Sources */,
+				053AEEDF2060D81C00B0AB6E /* PageContentViewController.m in Sources */,
 				0548156E2028477E00442C26 /* PermissionViewController.m in Sources */,
 				66AA5F8C169E20420046CA26 /* Eraser.m in Sources */,
 			);
