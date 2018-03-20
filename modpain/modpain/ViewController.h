@@ -49,6 +49,8 @@
     
     IBOutlet UIButton* pushToServerButton;
     IBOutlet UIButton* textureToggleButton;
+    
+    IBOutlet UISlider* brushSizeSlider;
 }
 
 - (void)saveImageAndSendWithImageStyleTransfer: (BOOL) withStyle;

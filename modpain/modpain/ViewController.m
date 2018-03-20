@@ -238,6 +238,13 @@
     // Send to server button pressed
     
 }
+- (IBAction)sliderDidChange:(id)sender {
+    // Set brush to slider size
+    UISlider *slider = sender;
+    float sliderValue = [slider value];
+    pen.maxSize = sliderValue;
+    marker.maxSize = sliderValue;
+}
 
 - (void)saveImageAndSendWithImageStyleTransfer:(BOOL)withStyle {
     // TODO: Do this in the SubmitViewController
