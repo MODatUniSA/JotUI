@@ -35,6 +35,7 @@
     pen.maxSize = 50.0;
     marker.minSize = 26.0;
     marker.maxSize = 50.0;
+    [brushSizeSlider setValue:marker.maxSize];
     
     [penVsMarkerControl setSelectedSegmentIndex:1];
     [pressureVsVelocityControl setSelectedSegmentIndex:1];
