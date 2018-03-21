@@ -34,9 +34,15 @@ float scaleFactorForMinimumSize;
     [textureToggleButton setTitle:@"Texture on" forState:UIControlStateNormal];
     
     // Custom MOD. marker default settings
-    initialSize = 50.0;
+    initialSize = 55.0;
     scaleFactorForMinimumSize = 2.0;
     [self resetBrushToDefaults];
+    
+    // Round colour pickers
+    [self roundColourPickers];
+    
+    // Show/hide settings button
+    [settingsButton removeFromSuperview];
     
     [penVsMarkerControl setSelectedSegmentIndex:1];
     [pressureVsVelocityControl setSelectedSegmentIndex:1];
@@ -77,7 +83,7 @@ float scaleFactorForMinimumSize;
 
         [self changePenType:nil];
 
-        [self tappedColorButton:blackButton];
+        [self tappedColorButton:modWhiteButton];
     }
 }
 
@@ -120,6 +126,20 @@ float scaleFactorForMinimumSize;
         [self tappedColorButton:greenButton];
     if ([[self activePen].color isEqual:blueButton.backgroundColor])
         [self tappedColorButton:blueButton];
+    if ([[self activePen].color isEqual:modRedButton.backgroundColor])
+        [self tappedColorButton:modRedButton];
+    if ([[self activePen].color isEqual:modBlueButton.backgroundColor])
+        [self tappedColorButton:modBlueButton];
+    if ([[self activePen].color isEqual:modGreenButton.backgroundColor])
+        [self tappedColorButton:modGreenButton];
+    if ([[self activePen].color isEqual:modWhiteButton.backgroundColor])
+        [self tappedColorButton:modWhiteButton];
+    if ([[self activePen].color isEqual:modOrangeButton.backgroundColor])
+        [self tappedColorButton:modOrangeButton];
+    if ([[self activePen].color isEqual:modPurpleButton.backgroundColor])
+        [self tappedColorButton:modPurpleButton];
+    if ([[self activePen].color isEqual:modYellowButton.backgroundColor])
+        [self tappedColorButton:modYellowButton];
 
     [self updatePenTickers];
 }
@@ -129,7 +149,7 @@ float scaleFactorForMinimumSize;
 }
 
 - (IBAction)tappedColorButton:(UIButton*)sender {
-    for (UIButton *button in [NSArray arrayWithObjects:blueButton, redButton, greenButton, blackButton, nil]) {
+    for (UIButton *button in [NSArray arrayWithObjects:blueButton, redButton, greenButton, blackButton, modRedButton, modBlueButton, modGreenButton, modWhiteButton, modOrangeButton, modPurpleButton, modYellowButton, nil]) {
         if (sender == button) {
             [button setBackgroundImage:[UIImage imageNamed:@"check.png"] forState:UIControlStateNormal];
             button.selected = YES;
@@ -391,8 +411,21 @@ float scaleFactorForMinimumSize;
     marker.minSize = initialSize/scaleFactorForMinimumSize;
     marker.maxSize = initialSize;
     [brushSizeSlider setValue: initialSize];
+    [self tappedColorButton:modWhiteButton];
 }
 
+- (void)roundedCornersWithRadius:(float)radius forButton:(UIButton *)button {
+    // Rounded corners for any imageView
+    button.layer.masksToBounds = YES;
+    button.layer.cornerRadius = radius;
+}
+
+- (void)roundColourPickers {
+    for (UIButton *button in [NSArray arrayWithObjects:modRedButton, modBlueButton, modGreenButton, modWhiteButton, modOrangeButton, modPurpleButton, modYellowButton, nil])
+    {
+        [self roundedCornersWithRadius:(button.bounds.size.width / 2.) forButton:button];
+    }
+}
 
 #pragma mark - JotViewDelegate
 

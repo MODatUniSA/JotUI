@@ -41,6 +41,14 @@
     IBOutlet UIButton* redButton;
     IBOutlet UIButton* greenButton;
     IBOutlet UIButton* blackButton;
+    
+    IBOutlet UIButton* modPurpleButton;
+    IBOutlet UIButton* modGreenButton;
+    IBOutlet UIButton* modBlueButton;
+    IBOutlet UIButton* modYellowButton;
+    IBOutlet UIButton* modOrangeButton;
+    IBOutlet UIButton* modRedButton;
+    IBOutlet UIButton* modWhiteButton;
 
     IBOutlet UIView* additionalOptionsView;
     IBOutlet UIButton* palmRejectionButton;
