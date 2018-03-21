@@ -322,6 +322,7 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90593636040000003" green="0.90593636040000003" blue="0.90593636040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.62745098040000002" green="0.25098039220000001" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLd-LQ-FmY">
                                 <rect key="frame" x="954" y="1296" width="50" height="50"/>
@@ -340,6 +341,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="10" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Udm-pM-x1f">
                                 <rect key="frame" x="285" y="1307" width="454" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="tintColor" red="0.62745098040000002" green="0.25098039220000001" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="sliderDidChange:" destination="eU2-cL-jCf" eventType="valueChanged" id="ub9-sN-06a"/>
                                 </connections>
@@ -448,7 +450,9 @@
                                             <constraint firstAttribute="height" constant="50" id="muv-Ya-ECS"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="Tell me more"/>
+                                        <state key="normal" title="Tell me more">
+                                            <color key="titleColor" red="0.62745098039215685" green="0.25098039215686274" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="TellMeMore:" destination="nku-5w-DQW" eventType="touchUpInside" id="nRb-kK-gUA"/>
                                         </connections>
@@ -460,7 +464,9 @@
                                             <constraint firstAttribute="width" constant="250" id="zOp-nn-xKE"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="Let me draw"/>
+                                        <state key="normal" title="Let me draw">
+                                            <color key="titleColor" red="0.62745098039215685" green="0.25098039215686274" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="DismissHelpSheet:" destination="UAv-oz-X6h" eventType="touchUpInside" id="VmU-oq-7qz"/>
                                         </connections>
@@ -515,11 +521,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mod-white-side" translatesAutoresizingMaskIntoConstraints="NO" id="dM9-Fn-kpo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="helpPage1" translatesAutoresizingMaskIntoConstraints="NO" id="dM9-Fn-kpo">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YvM-Wx-bgb">
-                                <rect key="frame" x="914" y="35" width="75" height="75"/>
+                                <rect key="frame" x="914" y="55" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="7KA-je-vfe"/>
                                     <constraint firstAttribute="height" constant="75" id="KfK-9p-1ZF"/>
@@ -530,20 +536,33 @@
                                     <action selector="closePageController:" destination="fsh-Ze-p8f" eventType="touchUpInside" id="O54-vi-7Ac"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😭" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c80-zR-Ffc">
+                                <rect key="frame" x="20" y="215" width="984" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="N2A-j9-qd0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="c80-zR-Ffc" firstAttribute="leading" secondItem="y4W-LQ-Fyc" secondAttribute="leading" constant="20" id="8G7-R7-SwS"/>
                             <constraint firstItem="y4W-LQ-Fyc" firstAttribute="trailing" secondItem="YvM-Wx-bgb" secondAttribute="trailing" constant="35" id="CCh-Nc-RgR"/>
+                            <constraint firstItem="y4W-LQ-Fyc" firstAttribute="trailing" secondItem="c80-zR-Ffc" secondAttribute="trailing" constant="20" id="Hbb-ux-FiF"/>
                             <constraint firstItem="dM9-Fn-kpo" firstAttribute="bottom" secondItem="y4W-LQ-Fyc" secondAttribute="bottom" id="URw-tl-NjR"/>
                             <constraint firstItem="dM9-Fn-kpo" firstAttribute="top" secondItem="cxD-pO-gWs" secondAttribute="top" id="ZZ2-MV-h74"/>
                             <constraint firstItem="dM9-Fn-kpo" firstAttribute="leading" secondItem="y4W-LQ-Fyc" secondAttribute="leading" id="bQZ-06-9bB"/>
-                            <constraint firstItem="YvM-Wx-bgb" firstAttribute="top" secondItem="y4W-LQ-Fyc" secondAttribute="top" constant="15" id="cKw-eg-c5x"/>
+                            <constraint firstItem="YvM-Wx-bgb" firstAttribute="top" secondItem="y4W-LQ-Fyc" secondAttribute="top" constant="35" id="cKw-eg-c5x"/>
                             <constraint firstItem="dM9-Fn-kpo" firstAttribute="trailing" secondItem="y4W-LQ-Fyc" secondAttribute="trailing" id="mCp-OA-WJz"/>
+                            <constraint firstItem="c80-zR-Ffc" firstAttribute="top" secondItem="YvM-Wx-bgb" secondAttribute="bottom" constant="85" id="okF-Sf-Rmq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="y4W-LQ-Fyc"/>
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="dM9-Fn-kpo" id="2fO-XT-xeV"/>
+                        <outlet property="pageEmoji" destination="c80-zR-Ffc" id="nC5-2z-Lod"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cqX-uJ-uWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -606,7 +625,9 @@
                                             <constraint firstAttribute="height" constant="50" id="i20-2U-mer"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="No thanks"/>
+                                        <state key="normal" title="No thanks">
+                                            <color key="titleColor" red="0.62745098040000002" green="0.25098039220000001" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="DismissPermissionPage:" destination="skz-rk-LF7" eventType="touchUpInside" id="Une-if-Ruf"/>
                                         </connections>
@@ -618,7 +639,9 @@
                                             <constraint firstAttribute="height" constant="50" id="sbU-LJ-g6f"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="Yeah sure"/>
+                                        <state key="normal" title="Yeah sure">
+                                            <color key="titleColor" red="0.62745098040000002" green="0.25098039220000001" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="PermissionGiven:" destination="skz-rk-LF7" eventType="touchUpInside" id="4EG-hm-F78"/>
                                             <segue destination="ISg-8B-gD6" kind="presentation" modalPresentationStyle="pageSheet" id="7WT-0E-FBf"/>
@@ -726,7 +749,9 @@
                                             <constraint firstAttribute="width" constant="250" id="q5D-hI-YQQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="No thanks"/>
+                                        <state key="normal" title="No thanks">
+                                            <color key="titleColor" red="0.62745098040000002" green="0.25098039220000001" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="NoImageStyleTransfer:" destination="ISg-8B-gD6" eventType="touchUpInside" id="tzh-nA-8WF"/>
                                         </connections>
@@ -738,7 +763,9 @@
                                             <constraint firstAttribute="width" constant="250" id="FQK-iJ-0L8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="Yeah sure"/>
+                                        <state key="normal" title="Yeah sure">
+                                            <color key="titleColor" red="0.62745098040000002" green="0.25098039220000001" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="YesImageStyleTransfer:" destination="ISg-8B-gD6" eventType="touchUpInside" id="poC-ng-89X"/>
                                         </connections>
@@ -787,6 +814,7 @@
     <resources>
         <image name="button-reset-ruby.png" width="40" height="40"/>
         <image name="check.png" width="30" height="30"/>
+        <image name="helpPage1" width="1024" height="1366"/>
         <image name="icons8-back-arrow-white-100.png" width="100" height="100"/>
         <image name="icons8-cancel-white-500.png" width="500" height="500"/>
         <image name="icons8-forward-arrow-white-100.png" width="100" height="100"/>
@@ -796,7 +824,6 @@
         <image name="icons8-paint-brush-100-white.png" width="100" height="100"/>
         <image name="icons8-settings-white-100.png" width="100" height="100"/>
         <image name="icons8-trash-can-white-500.png" width="500" height="500"/>
-        <image name="mod-white-side" width="150" height="375"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="R0S-ZV-6Td"/>

@@ -17,6 +17,9 @@
 
 @implementation ViewController
 
+float initialSize;
+float scaleFactorForMinimumSize;
+
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {
@@ -31,11 +34,9 @@
     [textureToggleButton setTitle:@"Texture on" forState:UIControlStateNormal];
     
     // Custom MOD. marker default settings
-    pen.minSize = 26.0;
-    pen.maxSize = 50.0;
-    marker.minSize = 26.0;
-    marker.maxSize = 50.0;
-    [brushSizeSlider setValue:marker.maxSize];
+    initialSize = 50.0;
+    scaleFactorForMinimumSize = 2.0;
+    [self resetBrushToDefaults];
     
     [penVsMarkerControl setSelectedSegmentIndex:1];
     [pressureVsVelocityControl setSelectedSegmentIndex:1];
@@ -244,11 +245,13 @@
     UISlider *slider = sender;
     float sliderValue = [slider value];
     pen.maxSize = sliderValue;
+    pen.minSize = sliderValue/scaleFactorForMinimumSize;
     marker.maxSize = sliderValue;
+    marker.minSize = sliderValue/scaleFactorForMinimumSize;
 }
 
 - (void)saveImageAndSendWithImageStyleTransfer:(BOOL)withStyle {
-    // TODO: Do this in the SubmitViewController
+    // Send image to the server
     [jotView exportImageTo:[self jotViewStateInkPath] andThumbnailTo:[self jotViewStateThumbPath] andStateTo:[self jotViewStatePlistPath] withThumbnailScale:1.0 onComplete:^(UIImage* ink, UIImage* thumb, JotViewImmutableState* state) {
         UIImageWriteToSavedPhotosAlbum(thumb, nil, nil, nil);
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -376,6 +379,18 @@
 
 - (IBAction)clearScreen:(id)sender {
     [jotView clear:YES];
+    // reset slider and brush sizes to defaults
+    [self resetBrushToDefaults];
+}
+
+- (void)resetBrushToDefaults {
+    pen.color = [blackButton backgroundColor];
+    marker.color = [blackButton backgroundColor];
+    pen.minSize = initialSize/scaleFactorForMinimumSize;
+    pen.maxSize = initialSize;
+    marker.minSize = initialSize/scaleFactorForMinimumSize;
+    marker.maxSize = initialSize;
+    [brushSizeSlider setValue: initialSize];
 }
 
 

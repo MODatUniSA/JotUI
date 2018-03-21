@@ -19,6 +19,7 @@
     // Do any additional setup after loading the view.
     
     self.backgroundImageView.image = [UIImage imageNamed:self.imageFile];
+    [self.pageEmoji setText:self.pageEmojiString];
     
 }
 

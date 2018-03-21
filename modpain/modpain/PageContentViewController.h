@@ -11,8 +11,10 @@
 @interface PageContentViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (weak, nonatomic) IBOutlet UILabel *pageEmoji;
 
 @property NSUInteger pageIndex;
 @property NSString *imageFile;
+@property NSString *pageEmojiString;
 
 @end

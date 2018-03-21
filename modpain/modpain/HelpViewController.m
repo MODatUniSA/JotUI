@@ -21,6 +21,7 @@
     // Help pages are saved in the Media.xcassets as PDFs
     // They also need to be added to the project first, so you can drag them to Media assets
     _pageImages = @[@"helpPage1", @"helpPage2", @"helpPage3"];
+    _pageEmoji = @[@"🤔", @"🤷🏽‍♀️", @"👏🏼"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -92,6 +93,7 @@
     // Create a new view controller and pass suitable data.
     PageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
     pageContentViewController.imageFile = self.pageImages[index];
+    pageContentViewController.pageEmojiString = self.pageEmoji[index];
     pageContentViewController.pageIndex = index;
     
     return pageContentViewController;

@@ -13,5 +13,6 @@
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (strong, nonatomic) NSArray *pageImages;
+@property (strong, nonatomic) NSArray *pageEmoji;
 
 @end
