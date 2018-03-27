@@ -43,6 +43,8 @@ float scaleFactorForMinimumSize;
     
     // Show/hide settings button
     [settingsButton removeFromSuperview];
+    // Remove MOD. colour options
+    [self removeColours];
     
     [penVsMarkerControl setSelectedSegmentIndex:1];
     [pressureVsVelocityControl setSelectedSegmentIndex:1];
@@ -113,6 +115,11 @@ float scaleFactorForMinimumSize;
     maxWidth.text = [NSString stringWithFormat:@"%d", (int)[self activePen].maxSize];
 }
 
+- (void)removeColours {
+    for (UIButton *button in [NSArray arrayWithObjects: modRedButton, modBlueButton, modGreenButton, modOrangeButton, modPurpleButton, modYellowButton, nil]) {
+        [button removeFromSuperview];
+    }
+}
 
 #pragma mark - IBAction
 
@@ -140,6 +147,8 @@ float scaleFactorForMinimumSize;
         [self tappedColorButton:modPurpleButton];
     if ([[self activePen].color isEqual:modYellowButton.backgroundColor])
         [self tappedColorButton:modYellowButton];
+    if ([[self activePen].color isEqual:modBlackButton.backgroundColor])
+        [self tappedColorButton:modBlackButton];
 
     [self updatePenTickers];
 }
@@ -149,7 +158,7 @@ float scaleFactorForMinimumSize;
 }
 
 - (IBAction)tappedColorButton:(UIButton*)sender {
-    for (UIButton *button in [NSArray arrayWithObjects:blueButton, redButton, greenButton, blackButton, modRedButton, modBlueButton, modGreenButton, modWhiteButton, modOrangeButton, modPurpleButton, modYellowButton, nil]) {
+    for (UIButton *button in [NSArray arrayWithObjects:blueButton, redButton, greenButton, blackButton, modRedButton, modBlueButton, modGreenButton, modWhiteButton, modOrangeButton, modPurpleButton, modYellowButton, modBlackButton, nil]) {
         if (sender == button) {
             [button setBackgroundImage:[UIImage imageNamed:@"check.png"] forState:UIControlStateNormal];
             button.selected = YES;
@@ -412,6 +421,12 @@ float scaleFactorForMinimumSize;
     marker.maxSize = initialSize;
     [brushSizeSlider setValue: initialSize];
     [self tappedColorButton:modWhiteButton];
+    [self whiteBorderForBlackColorButton];
+}
+
+- (void)whiteBorderForBlackColorButton {
+    modBlackButton.layer.borderWidth = 1.0f;
+    modBlackButton.layer.borderColor = [UIColor whiteColor].CGColor;
 }
 
 - (void)roundedCornersWithRadius:(float)radius forButton:(UIButton *)button {
@@ -421,7 +436,7 @@ float scaleFactorForMinimumSize;
 }
 
 - (void)roundColourPickers {
-    for (UIButton *button in [NSArray arrayWithObjects:modRedButton, modBlueButton, modGreenButton, modWhiteButton, modOrangeButton, modPurpleButton, modYellowButton, nil])
+    for (UIButton *button in [NSArray arrayWithObjects:modRedButton, modBlueButton, modGreenButton, modWhiteButton, modOrangeButton, modPurpleButton, modYellowButton, modBlackButton, nil])
     {
         [self roundedCornersWithRadius:(button.bounds.size.width / 2.) forButton:button];
     }
