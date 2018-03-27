@@ -19,6 +19,7 @@
 
 float initialSize;
 float scaleFactorForMinimumSize;
+float initialAlpha;
 
 #pragma mark - UIViewController
 
@@ -36,6 +37,7 @@ float scaleFactorForMinimumSize;
     // Custom MOD. marker default settings
     initialSize = 55.0;
     scaleFactorForMinimumSize = 2.0;
+    initialAlpha = 0.25;
     [self resetBrushToDefaults];
     
     // Round colour pickers
@@ -273,10 +275,17 @@ float scaleFactorForMinimumSize;
     // Set brush to slider size
     UISlider *slider = sender;
     float sliderValue = [slider value];
-    pen.maxSize = sliderValue;
-    pen.minSize = sliderValue/scaleFactorForMinimumSize;
-    marker.maxSize = sliderValue;
-    marker.minSize = sliderValue/scaleFactorForMinimumSize;
+    if ([slider.restorationIdentifier isEqualToString:@"brushSizeSlider"]) {
+        pen.maxSize = sliderValue;
+        pen.minSize = sliderValue/scaleFactorForMinimumSize;
+        marker.maxSize = sliderValue;
+        marker.minSize = sliderValue/scaleFactorForMinimumSize;
+    } else if ([slider.restorationIdentifier isEqualToString:@"brushOpacitySlider"]) {
+        pen.minAlpha = sliderValue;
+        pen.maxAlpha = sliderValue;
+        marker.minAlpha = sliderValue;
+        marker.maxAlpha = sliderValue;
+    }
 }
 
 - (void)saveImageAndSendWithImageStyleTransfer:(BOOL)withStyle {
@@ -419,7 +428,12 @@ float scaleFactorForMinimumSize;
     pen.maxSize = initialSize;
     marker.minSize = initialSize/scaleFactorForMinimumSize;
     marker.maxSize = initialSize;
+    pen.minAlpha = initialAlpha;
+    pen.maxAlpha = initialAlpha;
+    marker.minAlpha = initialAlpha;
+    marker.maxAlpha = initialAlpha;
     [brushSizeSlider setValue: initialSize];
+    [brushOpacitySlider setValue:initialAlpha];
     [self tappedColorButton:modWhiteButton];
     [self whiteBorderForBlackColorButton];
 }

@@ -60,6 +60,7 @@
     IBOutlet UIButton* textureToggleButton;
     
     IBOutlet UISlider* brushSizeSlider;
+    IBOutlet UISlider* brushOpacitySlider;
 }
 
 - (void)saveImageAndSendWithImageStyleTransfer: (BOOL) withStyle;
