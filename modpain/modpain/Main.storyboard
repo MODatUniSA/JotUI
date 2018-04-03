@@ -330,7 +330,7 @@
                                     <constraint firstAttribute="height" constant="50" id="PzL-jF-0r6"/>
                                     <constraint firstAttribute="width" constant="50" id="mab-ht-oY9"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="icons8-help-white-100.png"/>
+                                <state key="normal" title="Button" image="icons8-home-page-filled-100-white.png"/>
                                 <connections>
                                     <segue destination="nku-5w-DQW" kind="presentation" identifier="helpSegue" modalPresentationStyle="pageSheet" id="R0S-ZV-6Td">
                                         <segue key="commit" inheritsFrom="parent" id="pnB-Os-6F3"/>
@@ -919,7 +919,7 @@
         <image name="icons8-back-arrow-white-100.png" width="100" height="100"/>
         <image name="icons8-cancel-white-500.png" width="500" height="500"/>
         <image name="icons8-forward-arrow-white-100.png" width="100" height="100"/>
-        <image name="icons8-help-white-100.png" width="100" height="100"/>
+        <image name="icons8-home-page-filled-100-white.png" width="100" height="100"/>
         <image name="icons8-ok-white-500.png" width="500" height="500"/>
         <image name="icons8-paint-100-white.png" width="100" height="100"/>
         <image name="icons8-paint-brush-100-white.png" width="100" height="100"/>
