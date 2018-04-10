@@ -23,6 +23,10 @@
                                              selector:@selector(receiveCompleteNotification:)
                                                  name:@"ProcessingCompleteNotification"
                                                object:nil];
+    
+    // TODO: move to a settings option
+    // Always set to no style transfer for now
+    [self NoImageStyleTransfer:nil];
 }
 
 - (void) receiveCompleteNotification:(NSNotification *) notification {
