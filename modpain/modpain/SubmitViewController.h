@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SubmitViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *submitPageEmoji;
 @property (weak, nonatomic) IBOutlet UILabel *submitPageTitle;
 @property (weak, nonatomic) IBOutlet UILabel *submitPageBodyText;
 @property (weak, nonatomic) IBOutlet UIButton *submitPageNoButton;

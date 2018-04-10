@@ -730,7 +730,7 @@
                                             <color key="titleColor" red="0.62745098040000002" green="0.25098039220000001" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="DismissPermissionPage:" destination="skz-rk-LF7" eventType="touchUpInside" id="Une-if-Ruf"/>
+                                            <action selector="PermissionNotGiven:" destination="skz-rk-LF7" eventType="touchUpInside" id="Aqc-LO-seQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9R-hD-dnx">
@@ -789,6 +789,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VgW-YW-VL5"/>
                     </view>
+                    <connections>
+                        <outlet property="permissionPageBodyText" destination="hhp-k4-Qu4" id="oev-nn-wWS"/>
+                        <outlet property="permissionPageDescriptionText" destination="wKc-Oh-nPl" id="xA6-yj-Ek8"/>
+                        <outlet property="permissionPageEmoji" destination="k2e-4d-4Ug" id="b2x-rg-ENv"/>
+                        <outlet property="permissionPageNoButton" destination="5sB-Gg-RDm" id="zPe-i1-go6"/>
+                        <outlet property="permissionPageTitle" destination="ZcM-TA-ZG2" id="BzZ-ka-67x"/>
+                        <outlet property="permissionPageYesButton" destination="T9R-hD-dnx" id="mOA-7e-8b9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DuS-ng-yVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -902,6 +910,7 @@
                     </view>
                     <connections>
                         <outlet property="submitPageBodyText" destination="wl6-vX-lgK" id="N6n-jK-Utu"/>
+                        <outlet property="submitPageEmoji" destination="Yfh-jd-6LH" id="9gw-6q-bcU"/>
                         <outlet property="submitPageNoButton" destination="rdB-cJ-gsG" id="ojO-OG-XKO"/>
                         <outlet property="submitPageTitle" destination="U9X-7Q-nTd" id="Aga-3X-yrH"/>
                         <outlet property="submitPageYesButton" destination="Tat-k7-oqe" id="UGR-6c-Y7f"/>

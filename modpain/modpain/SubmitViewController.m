@@ -36,6 +36,7 @@
     // Dismiss loading notification
     if (complete) {
         dispatch_async(dispatch_get_main_queue(), ^{
+            [self.submitPageEmoji setText:@"😎"];
             [self.submitPageTitle setText:@"Finished!"];
             [self.submitPageBodyText setText:@"Your image has been submitted to be reviewed! Thank you."];
         });

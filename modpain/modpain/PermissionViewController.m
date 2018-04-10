@@ -23,6 +23,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)PermissionNotGiven:(id)sender {
+    [self.permissionPageEmoji setText:@"😎"];
+    [self.permissionPageTitle setText:@"Thank you!"];
+    [self.permissionPageBodyText setText:@"Thanks for drawing. We haven't saved your image so won't use it anywhere in the gallery."];
+    [self.permissionPageNoButton removeFromSuperview];
+    [self.permissionPageYesButton removeFromSuperview];
+    [self.permissionPageDescriptionText setText:@"You're welcome to delete your image using the trash can on the top right."];
+}
 - (IBAction)DismissPermissionPage:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
