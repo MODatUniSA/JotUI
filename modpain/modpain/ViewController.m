@@ -302,15 +302,14 @@ float initialAlpha;
 
 - (void)sendImageToServer: (UIImage *) image withStyle: (BOOL) styleTransfer {
     // Send UIImage to slideshow server
-    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://10.220.171.72:3000/images"]];
+//    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://10.220.171.72:3000/images"]];
+    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://localhost:3000/images"]];
     
     // UIImage to data for our server
     NSData *imageData = UIImagePNGRepresentation(image);
     NSString *imageDataBase64 = [[imageData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed] stringByReplacingOccurrencesOfString:@"+" withString:@"%2B"];
     
-    // TODO: Get server to allow no-style-transfer and send it here.
-    
-    NSString *postBodyData = [NSString stringWithFormat:@"image[ios_data]=%@",imageDataBase64];
+    NSString *postBodyData = [NSString stringWithFormat:@"image[ios_data]=%@&image[style_transfer]=%s",imageDataBase64, styleTransfer ? "true" : "false"];
     
     //create the Method "GET" or "POST"
     [urlRequest setHTTPMethod:@"POST"];
