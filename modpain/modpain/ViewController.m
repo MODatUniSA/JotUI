@@ -56,6 +56,17 @@ float initialAlpha;
                                              selector:@selector(receiveSubmitNotification:)
                                                  name:@"SubmitNotification"
                                                object:nil];
+    
+    // Set ourselves up for notifications when the timer times out
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationDidTimeout:) name:kApplicationDidTimeoutNotification
+                                               object:nil];
+    
+    // Set ourselves up for reset timer notifications
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(resetTimerNotification:)
+                                                 name:@"ResetTimerNotification"
+                                               object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -479,6 +490,10 @@ float initialAlpha;
 
 - (BOOL)willBeginStrokeWithCoalescedTouch:(UITouch*)coalescedTouch fromTouch:(UITouch*)touch {
     [[self activePen] willBeginStrokeWithCoalescedTouch:coalescedTouch fromTouch:touch];
+    
+    // Reset timeout timer
+    [self resetIdleTimer];
+    
     return YES;
 }
 
@@ -547,5 +562,37 @@ float initialAlpha;
 - (void)didUnloadState:(JotViewStateProxy*)state {
 }
 
+#pragma mark - Idle Timer
+
+- (void)resetIdleTimer
+{
+    if (idleTimer)
+    {
+        [idleTimer invalidate];
+    }
+    // convert the wait period into minutes rather than seconds
+    int timeout = kApplicationTimeoutInMinutes * 60;
+    idleTimer = [NSTimer scheduledTimerWithTimeInterval:timeout target:self selector:@selector(idleTimerExceeded) userInfo:nil repeats:NO];
+    
+}
+
+- (void)idleTimerExceeded
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:kApplicationDidTimeoutNotification object:nil];
+}
+
+- (void)applicationDidTimeout:(NSNotification *) notification
+{
+    NSLog (@"time exceeded!!");
+    
+    // Clear the screen and show the home/help screen
+    [self clearScreen:nil];
+    [self performSegueWithIdentifier:@"helpSegue" sender:nil];
+}
+
+- (void)resetTimerNotification:(NSNotification *) notification
+{
+    [self resetIdleTimer];
+}
 
 @end

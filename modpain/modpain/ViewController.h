@@ -12,6 +12,11 @@
 #import "Marker.h"
 #import "Eraser.h"
 
+// Timeout before the app pops the home/help view
+#define kApplicationTimeoutInMinutes 2
+
+// The notification our AppDelegate needs to watch for in order to know that it has "timed out"
+#define kApplicationDidTimeoutNotification @"AppTimeOut"
 
 @interface ViewController : UIViewController <JotViewDelegate, UIPopoverControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
     IBOutlet JotView* jotView;
@@ -61,8 +66,11 @@
     
     IBOutlet UISlider* brushSizeSlider;
     IBOutlet UISlider* brushOpacitySlider;
+    
+    NSTimer* idleTimer;
 }
 
 - (void)saveImageAndSendWithImageStyleTransfer: (BOOL) withStyle;
+- (void)resetIdleTimer;
 
 @end

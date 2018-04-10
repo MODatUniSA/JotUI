@@ -39,6 +39,8 @@
 
 - (IBAction)DismissHelpSheet:(UIStoryboardSegue *)unwindSegue {
 //    [self dismissViewControllerAnimated:YES completion:nil];
+    // Reset timeout timer
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ResetTimerNotification" object:nil];
     [self dismissModalStack];
 }
 - (IBAction)TellMeMore:(id)sender {
