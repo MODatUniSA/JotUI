@@ -67,6 +67,9 @@ float initialAlpha;
                                              selector:@selector(resetTimerNotification:)
                                                  name:@"ResetTimerNotification"
                                                object:nil];
+    
+    // Avoid sleeping
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -313,8 +316,8 @@ float initialAlpha;
 
 - (void)sendImageToServer: (UIImage *) image withStyle: (BOOL) styleTransfer {
     // Send UIImage to slideshow server
-//    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://10.220.171.72:3000/images"]];
-    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://localhost:3000/images"]];
+    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://10.220.203.134:3000/images"]];
+//    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://localhost:3000/images"]];
     
     // UIImage to data for our server
     NSData *imageData = UIImagePNGRepresentation(image);
