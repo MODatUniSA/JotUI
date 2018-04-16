@@ -20,6 +20,7 @@
 float initialSize;
 float scaleFactorForMinimumSize;
 float initialAlpha;
+bool hasLoadedOnce;
 
 #pragma mark - UIViewController
 
@@ -35,7 +36,7 @@ float initialAlpha;
     [textureToggleButton setTitle:@"Texture on" forState:UIControlStateNormal];
     
     // Custom MOD. marker default settings
-    initialSize = 55.0;
+    initialSize = 80.0;
     scaleFactorForMinimumSize = 2.0;
     initialAlpha = 0.25;
     [self resetBrushToDefaults];
@@ -73,8 +74,11 @@ float initialAlpha;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    // Present the help by default at first load
-    [self performSegueWithIdentifier:@"helpSegue" sender:nil];
+    if (!hasLoadedOnce) {
+        hasLoadedOnce = TRUE;
+        // Present the help by default at first load
+        [self performSegueWithIdentifier:@"helpSegue" sender:nil];
+    }
 }
 
 - (void) receiveSubmitNotification:(NSNotification *) notification {
@@ -316,7 +320,7 @@ float initialAlpha;
 
 - (void)sendImageToServer: (UIImage *) image withStyle: (BOOL) styleTransfer {
     // Send UIImage to slideshow server
-    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://10.220.203.134:3000/images"]];
+    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://10.243.200.18:3000/images"]];
 //    NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://localhost:3000/images"]];
     
     // UIImage to data for our server
