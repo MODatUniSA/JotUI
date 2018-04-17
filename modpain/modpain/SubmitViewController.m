@@ -27,6 +27,11 @@
     // TODO: move to a settings option
     // Always set to no style transfer for now
     [self NoImageStyleTransfer:nil];
+    
+    // Remove Emoji?
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"removeEmoji"]) {
+        [self.submitPageEmoji setText:@""];
+    }
 }
 
 - (void) receiveCompleteNotification:(NSNotification *) notification {
@@ -36,7 +41,10 @@
     // Dismiss loading notification
     if (complete) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.submitPageEmoji setText:@"😎"];
+            // Remove Emoji?
+            if (![[NSUserDefaults standardUserDefaults] boolForKey:@"removeEmoji"]) {
+                [self.submitPageEmoji setText:@"😎"];
+            }
             [self.submitPageTitle setText:@"Finished!"];
             [self.submitPageBodyText setText:@"Your image has been submitted to be reviewed! Thank you."];
         });

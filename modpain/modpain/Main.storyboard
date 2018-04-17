@@ -627,6 +627,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fGb-6C-OSi"/>
                     </view>
+                    <connections>
+                        <outlet property="helpPageEmoji" destination="xkW-Y3-2TD" id="IIi-O9-K7k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAv-oz-X6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -664,9 +667,9 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😭" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c80-zR-Ffc">
-                                <rect key="frame" x="20" y="130" width="1326" height="150"/>
+                                <rect key="frame" x="20" y="130" width="1326" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="N2A-j9-qd0"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="N2A-j9-qd0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="75"/>
                                 <nil key="textColor"/>

@@ -17,6 +17,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // Remove Emoji?
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"removeEmoji"]) {
+        // leave them there.
+    } else {
+        [self.permissionPageEmoji setText:@""];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,7 +31,10 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)PermissionNotGiven:(id)sender {
-    [self.permissionPageEmoji setText:@"😎"];
+    // Remove Emoji?
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"removeEmoji"]) {
+        [self.permissionPageEmoji setText:@"😎"];
+    }
     [self.permissionPageTitle setText:@"Thank you!"];
     [self.permissionPageBodyText setText:@"Thanks for drawing. We haven't saved your image so won't use it anywhere in the gallery."];
     [self.permissionPageNoButton removeFromSuperview];

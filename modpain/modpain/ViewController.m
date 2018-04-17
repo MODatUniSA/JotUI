@@ -44,10 +44,21 @@ bool hasLoadedOnce;
     // Round colour pickers
     [self roundColourPickers];
     
+    // TODO: LOAD THESE FROM THE iPAD APP SETTINGS
     // Show/hide settings button
-    [settingsButton removeFromSuperview];
+    [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"removeSettings"];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"removeSettings"]) {
+        [settingsButton removeFromSuperview];
+    }
     // Remove MOD. colour options
-    [self removeColours];
+    [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"removeMODColours"];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"removeSettings"]) {
+        [self removeColours];
+    }
+    // Remove Emoji
+    [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"removeEmoji"];
+    // No Style Transfer
+    [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"removeStyleTransfer"];
     
     [penVsMarkerControl setSelectedSegmentIndex:1];
     [pressureVsVelocityControl setSelectedSegmentIndex:1];
