@@ -52,13 +52,15 @@ bool hasLoadedOnce;
     }
     // Remove MOD. colour options
     [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"removeMODColours"];
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"removeSettings"]) {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"removeMODColours"]) {
         [self removeColours];
     }
     // Remove Emoji
     [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"removeEmoji"];
     // No Style Transfer
     [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"removeStyleTransfer"];
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
     [penVsMarkerControl setSelectedSegmentIndex:1];
     [pressureVsVelocityControl setSelectedSegmentIndex:1];
