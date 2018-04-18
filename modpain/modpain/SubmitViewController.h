@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define kApplicationDidTimeoutNotification @"AppTimeOut"
+
 @interface SubmitViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *submitPageEmoji;
 @property (weak, nonatomic) IBOutlet UILabel *submitPageTitle;

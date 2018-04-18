@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#define kApplicationDidTimeoutNotification @"AppTimeOut"
+
 @interface PermissionViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *permissionPageEmoji;

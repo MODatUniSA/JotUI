@@ -47,6 +47,7 @@
             }
             [self.submitPageTitle setText:@"Finished!"];
             [self.submitPageBodyText setText:@"Your image has been submitted to be reviewed! Thank you."];
+            [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"drawingSubmitted"];
         });
     } else {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -76,6 +77,9 @@
 - (IBAction)DismissSubmitPage:(id)sender {
 //    [self dismissViewControllerAnimated:YES completion:nil];
     [self dismissModalStack];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"drawingSubmitted"]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kApplicationDidTimeoutNotification object:nil];
+    }
 }
 - (IBAction)NoImageStyleTransfer:(id)sender {
     // COOL COOL, just send the raw image

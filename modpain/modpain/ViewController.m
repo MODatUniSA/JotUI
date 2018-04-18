@@ -59,6 +59,8 @@ bool hasLoadedOnce;
     [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"removeEmoji"];
     // No Style Transfer
     [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"removeStyleTransfer"];
+    // Drawing submitted?
+    [[NSUserDefaults standardUserDefaults] setBool:FALSE forKey:@"drawingSubmitted"];
     
     [[NSUserDefaults standardUserDefaults] synchronize];
     

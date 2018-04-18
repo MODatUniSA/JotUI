@@ -13,7 +13,7 @@
 #import "Eraser.h"
 
 // Timeout before the app pops the home/help view
-#define kApplicationTimeoutInMinutes 2
+#define kApplicationTimeoutInMinutes 1
 
 // The notification our AppDelegate needs to watch for in order to know that it has "timed out"
 #define kApplicationDidTimeoutNotification @"AppTimeOut"
