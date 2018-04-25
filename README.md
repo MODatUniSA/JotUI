@@ -1,16 +1,18 @@
 # MOD. Draw Your Pain
 
-A prototype iOS application to allow visitors to draw their pain levels.
+An iOS application to allow visitors to draw their pain levels.
+
+<img width=100% src=“draw-your-pain.jpg” />
 
 ## TODO:
 
-* ~~Setup project and get JotUI running~~. (3hrs)
+* ~~Setup project and get JotUI running~~.
 * ~~Post the image created to a web server.~~
 * ~~Have that web server generate a slideshow.~~
 * ~~Augment the images.~~
 * ~~Add an undo/redo button.~~
 * ~~Make the interface a bit prettier.~~
-* Create custom brush textures.
+* ~~Create custom brush textures.~~
 
 ## Servers
 
