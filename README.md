@@ -2,7 +2,7 @@
 
 An iOS application to allow visitors to draw their pain levels.
 
-<img width=100% src=“draw-your-pain.jpg” />
+<img width=100% src="draw-your-pain.jpg" />
 
 ## TODO:
 
