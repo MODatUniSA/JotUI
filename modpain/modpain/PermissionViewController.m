@@ -41,6 +41,7 @@
     [self.permissionPageYesButton removeFromSuperview];
 //    [self.permissionPageDescriptionText setText:@"You're welcome to delete your image using the trash can on the top right."];
     [self.permissionPageDescriptionText setText:@""];
+    [self performSelector:@selector(showHowDoesThisHelpMe:) withObject:nil afterDelay:5.0];
 }
 - (IBAction)DismissPermissionPage:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -50,6 +51,17 @@
     // Do we need to do anything here?
 }
 
+- (void)showHowDoesThisHelpMe:(NSNotification *)notification {
+    // TODO: Refactor - also in permission view controller
+    // Show research text
+    if (self.permissionPageTitle) {
+        [self.permissionPageTitle setText:@"How does this help me?"];
+        [self.permissionPageBodyText setText:@"Research suggests that drawings of pain can help to bring some elements of pain experience out of unconscious and into more conscious dialogue and control. By discovering and dissecting the meanings of these elements, their significance to, and impact on, pain experience can emerge."];
+    }
+    
+    // Pause, then dismiss & reset.
+    [self performSelector:@selector(DismissPermissionPage:) withObject:nil afterDelay:30.0];
+}
 
 #pragma mark - Navigation
 

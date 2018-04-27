@@ -21,6 +21,13 @@
     self.backgroundImageView.image = [UIImage imageNamed:self.imageFile];
     [self.pageEmoji setText:self.pageEmojiString];
     
+    // Set a 2 minute time-out
+    [self performSelector:@selector(dismissHelpPage:) withObject:nil afterDelay:120.0];
+}
+
+- (void)dismissHelpPage:(NSNotification *)notification {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ResetTimerNotification" object:nil];
+    [self closePageController:nil];
 }
 
 - (void)didReceiveMemoryWarning {

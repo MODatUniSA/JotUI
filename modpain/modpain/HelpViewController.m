@@ -50,6 +50,20 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"ResetTimerNotification" object:nil];
     [self dismissModalStack];
 }
+- (IBAction)LetMeDraw:(id)sender {
+    // Prompt user about what to draw
+    [self.helpPageTitle setText:@"Imagine..."];
+    [self.helpPageBody setText:@"the last time you experienced pain."];
+    [self.helpPageTellMeMore removeFromSuperview];
+    [self.helpPageLetMeDraw removeFromSuperview];
+    
+    // Now reset timer and dismiss sheet
+    [self performSelector:@selector(dismissImaginePage:) withObject:nil afterDelay:4.0];
+}
+- (void)dismissImaginePage:(NSNotification *)notification {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ResetTimerNotification" object:nil];
+    [self dismissModalStack];
+}
 - (IBAction)TellMeMore:(id)sender {
     // Create page view controller with three help pages
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];

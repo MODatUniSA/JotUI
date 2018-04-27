@@ -530,19 +530,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Draw Your Pain" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egH-By-MC4">
-                                <rect key="frame" x="20" y="308" width="1326" height="80"/>
+                                <rect key="frame" x="20" y="308" width="1326" height="85"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="teJ-OI-IKs"/>
+                                    <constraint firstAttribute="height" constant="85" id="teJ-OI-IKs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GalanoGrotesque-Bold" family="Galano Grotesque" pointSize="82"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This exhibit allows you to draw your pain.  It might give you insights into your beliefs and perception of pain." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2o-Vo-FLb">
-                                <rect key="frame" x="216" y="438" width="934" height="300"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2o-Vo-FLb">
+                                <rect key="frame" x="216" y="443" width="934" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="Jo8-HI-Os5"/>
                                 </constraints>
+                                <string key="text">This exhibit allows you to draw your physical and emotional pain.  This process might give you insights into your beliefs and perception of pain.</string>
                                 <fontDescription key="fontDescription" name="NHaasGroteskDSPro-55Rg" family="Neue Haas Grotesk Display Pro" pointSize="52"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -568,7 +569,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwI-gf-MC9">
-                                <rect key="frame" x="216" y="788" width="934" height="130"/>
+                                <rect key="frame" x="216" y="793" width="934" height="130"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWb-bL-lED">
                                         <rect key="frame" x="8" y="40" width="250" height="50"/>
@@ -595,7 +596,7 @@
                                             <color key="titleColor" red="0.62745098039215685" green="0.25098039215686274" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="DismissHelpSheet:" destination="UAv-oz-X6h" eventType="touchUpInside" id="VmU-oq-7qz"/>
+                                            <action selector="LetMeDraw:" destination="nku-5w-DQW" eventType="touchUpInside" id="8k3-yq-sSU"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -628,7 +629,11 @@
                         <viewLayoutGuide key="safeArea" id="fGb-6C-OSi"/>
                     </view>
                     <connections>
+                        <outlet property="helpPageBody" destination="x2o-Vo-FLb" id="Qjb-oh-3Ua"/>
                         <outlet property="helpPageEmoji" destination="xkW-Y3-2TD" id="IIi-O9-K7k"/>
+                        <outlet property="helpPageLetMeDraw" destination="4jX-jG-5NT" id="Ejr-zH-U3h"/>
+                        <outlet property="helpPageTellMeMore" destination="gWb-bL-lED" id="FA9-Ph-6op"/>
+                        <outlet property="helpPageTitle" destination="egH-By-MC4" id="L1V-c8-Upc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAv-oz-X6h" userLabel="First Responder" sceneMemberID="firstResponder"/>

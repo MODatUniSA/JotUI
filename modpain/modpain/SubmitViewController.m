@@ -46,15 +46,38 @@
                 [self.submitPageEmoji setText:@"😎"];
             }
             [self.submitPageTitle setText:@"Finished!"];
-            [self.submitPageBodyText setText:@"Your image has been submitted to be reviewed! Thank you."];
+            [self.submitPageBodyText setText:@"Your image has been submitted to be reviewed! This process may take up to a week. Thank you."];
             [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"drawingSubmitted"];
+            // Show research
+            [self performSelector:@selector(showHowDoesThisHelpMe:) withObject:nil afterDelay:5.0];
         });
     } else {
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.submitPageTitle setText:@"Oops!"];
             [self.submitPageBodyText setText:@"Something went wrong, please let a MOD. team member know."];
+            // Now reset timer and dismiss sheet
+            [self performSelector:@selector(dismissSubmitPage:) withObject:nil afterDelay:10.0];
         });
     }
+}
+
+- (void)showHowDoesThisHelpMe:(NSNotification *)notification {
+    // TODO: Refactor - also in permission view controller
+    // Show research text
+    if (self.submitPageTitle) {
+        [self.submitPageTitle setText:@"How does this help me?"];
+        [self.submitPageBodyText setText:@"Research suggests that drawings of pain can help to bring some elements of pain experience out of unconscious and into more conscious dialogue and control. By discovering and dissecting the meanings of these elements, their significance to, and impact on, pain experience can emerge."];
+    }
+    
+    // Pause, then dismiss & reset.
+    [self performSelector:@selector(dismissSubmitPage:) withObject:nil afterDelay:10.0];
+}
+
+- (void)dismissSubmitPage:(NSNotification *)notification {
+    // TODO: Refactor - also in permission view controller
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"ResetTimerNotification" object:nil];
+    [self dismissModalStack];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kApplicationDidTimeoutNotification object:nil];
 }
 
 - (void) dealloc {
