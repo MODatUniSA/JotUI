@@ -46,7 +46,7 @@
                 [self.submitPageEmoji setText:@"😎"];
             }
             [self.submitPageTitle setText:@"Finished!"];
-            [self.submitPageBodyText setText:@"Your image has been submitted to be reviewed! This process may take up to a week. Thank you."];
+            [self.submitPageBodyText setText:@"Your image has been submitted! A random selection of accepted drawings will be projected on the wall."];
             [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"drawingSubmitted"];
             // Show research
             [self performSelector:@selector(showHowDoesThisHelpMe:) withObject:nil afterDelay:5.0];

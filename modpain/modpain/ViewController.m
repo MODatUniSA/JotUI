@@ -36,7 +36,7 @@ bool hasLoadedOnce;
     [textureToggleButton setTitle:@"Texture on" forState:UIControlStateNormal];
     
     // Custom MOD. marker default settings
-    initialSize = 80.0;
+    initialSize = 40.0;
     scaleFactorForMinimumSize = 2.0;
     initialAlpha = 0.25;
     [self resetBrushToDefaults];

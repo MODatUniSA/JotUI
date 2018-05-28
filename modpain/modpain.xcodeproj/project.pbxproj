@@ -21,6 +21,8 @@
 		053AEEE5206139B900B0AB6E /* helpPage1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 053AEEE4206139B800B0AB6E /* helpPage1.pdf */; };
 		053AEEE820613E7800B0AB6E /* helpPage2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 053AEEE620613E7700B0AB6E /* helpPage2.pdf */; };
 		053AEEE920613E7800B0AB6E /* helpPage3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 053AEEE720613E7700B0AB6E /* helpPage3.pdf */; };
+		054419E320BBD198004CAAFA /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054419E220BBD198004CAAFA /* GameKit.framework */; };
+		054419E520BBD19C004CAAFA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054419E420BBD19C004CAAFA /* StoreKit.framework */; };
 		054815532027C87300442C26 /* icons8-info-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 054815522027C87300442C26 /* icons8-info-100.png */; };
 		054815552027C8C600442C26 /* icons8-help-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 054815542027C8C500442C26 /* icons8-help-100.png */; };
 		054815582027CD3200442C26 /* icons8-cancel-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 054815562027CD3100442C26 /* icons8-cancel-100.png */; };
@@ -109,6 +111,8 @@
 		053AEEE4206139B800B0AB6E /* helpPage1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = helpPage1.pdf; sourceTree = "<group>"; };
 		053AEEE620613E7700B0AB6E /* helpPage2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = helpPage2.pdf; sourceTree = "<group>"; };
 		053AEEE720613E7700B0AB6E /* helpPage3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = helpPage3.pdf; sourceTree = "<group>"; };
+		054419E220BBD198004CAAFA /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		054419E420BBD19C004CAAFA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		054815522027C87300442C26 /* icons8-info-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-info-100.png"; sourceTree = "<group>"; };
 		054815542027C8C500442C26 /* icons8-help-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-help-100.png"; sourceTree = "<group>"; };
 		054815562027CD3100442C26 /* icons8-cancel-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-cancel-100.png"; sourceTree = "<group>"; };
@@ -198,12 +202,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				054419E320BBD198004CAAFA /* GameKit.framework in Frameworks */,
 				C5C459EA1DBF155900C50EA7 /* JotUI.framework in Frameworks */,
 				C5018DEF1C2BCE5100A68A1C /* CoreMotion.framework in Frameworks */,
 				C5018DED1C2BCE4A00A68A1C /* SystemConfiguration.framework in Frameworks */,
 				668B560916F25B24000F6674 /* CoreGraphics.framework in Frameworks */,
 				669B3A9E1692BC4500F12F42 /* OpenGLES.framework in Frameworks */,
 				668B560A16F25BA6000F6674 /* QuartzCore.framework in Frameworks */,
+				054419E520BBD19C004CAAFA /* StoreKit.framework in Frameworks */,
 				66F9214816734FF000B1F868 /* UIKit.framework in Frameworks */,
 				66F9214A16734FF000B1F868 /* Foundation.framework in Frameworks */,
 			);
@@ -334,6 +340,8 @@
 		66F9214616734FF000B1F868 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				054419E420BBD19C004CAAFA /* StoreKit.framework */,
+				054419E220BBD198004CAAFA /* GameKit.framework */,
 				C5C459E91DBF155900C50EA7 /* JotUI.framework */,
 				C5018DEE1C2BCE5100A68A1C /* CoreMotion.framework */,
 				C5018DEC1C2BCE4A00A68A1C /* SystemConfiguration.framework */,
@@ -435,6 +443,14 @@
 					66F9214216734FF000B1F868 = {
 						DevelopmentTeam = 4P8S9W2NYL;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -666,7 +682,7 @@
 					"-fobjc-arc",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sighmon;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sighmon.draw-your-pain";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -689,7 +705,7 @@
 					"-fobjc-arc",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sighmon;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sighmon.draw-your-pain";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

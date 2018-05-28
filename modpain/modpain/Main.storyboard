@@ -330,7 +330,7 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" restorationIdentifier="brushSizeSlider" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="80" minValue="10" maxValue="150" translatesAutoresizingMaskIntoConstraints="NO" id="Udm-pM-x1f">
+                            <slider opaque="NO" contentMode="scaleToFill" restorationIdentifier="brushSizeSlider" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="40" minValue="10" maxValue="150" translatesAutoresizingMaskIntoConstraints="NO" id="Udm-pM-x1f">
                                 <rect key="frame" x="456" y="964" width="454" height="31"/>
                                 <color key="tintColor" red="0.62745098040000002" green="0.25098039220000001" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
