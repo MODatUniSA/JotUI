@@ -324,7 +324,12 @@ bool hasLoadedOnce;
 - (void)saveImageAndSendWithImageStyleTransfer:(BOOL)withStyle {
     // Send image to the server
     [jotView exportImageTo:[self jotViewStateInkPath] andThumbnailTo:[self jotViewStateThumbPath] andStateTo:[self jotViewStatePlistPath] withThumbnailScale:1.0 onComplete:^(UIImage* ink, UIImage* thumb, JotViewImmutableState* state) {
-        UIImageWriteToSavedPhotosAlbum(thumb, nil, nil, nil);
+        
+        // Save image to Photos as a transparent PNG
+        NSData *imageData =  UIImagePNGRepresentation(thumb);
+        UIImage *pngImage = [UIImage imageWithData:imageData];
+        UIImageWriteToSavedPhotosAlbum(pngImage, nil, nil, nil);
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             // Image saved
             NSLog(@"Image saved. Sending to server...");
