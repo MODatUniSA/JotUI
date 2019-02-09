@@ -11,6 +11,7 @@
 #import "Pen.h"
 #import "Marker.h"
 #import "Eraser.h"
+#import "Highlighter.h"
 
 // Timeout before the app pops the home/help view
 #define kApplicationTimeoutInMinutes 1
@@ -24,8 +25,9 @@
     Marker* marker;
     Eraser* eraser;
     BOOL textureActive;
+    Highlighter* highlighter;
 
-    UIViewController* popoverController;
+    UIPopoverController* popoverController;
 
     IBOutlet UISegmentedControl* pressureVsVelocityControl;
     IBOutlet UISegmentedControl* penVsMarkerControl;

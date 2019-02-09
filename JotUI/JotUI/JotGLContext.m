@@ -146,7 +146,7 @@ typedef enum UndfBOOL {
     GLint texparam_GL_TEXTURE_WRAP_S;
     GLint texparam_GL_TEXTURE_WRAP_T;
 
-    BOOL (^validateThreadBlock)();
+    BOOL (^validateThreadBlock)(void);
     NSRecursiveLock* lock;
 
     NSMutableDictionary* contextProperties;
@@ -232,7 +232,7 @@ typedef enum UndfBOOL {
     contextProperties = [NSMutableDictionary dictionary];
 }
 
-- (id)initWithName:(NSString*)_name andValidateThreadWith:(BOOL (^)())_validateThreadBlock {
+- (id)initWithName:(NSString*)_name andValidateThreadWith:(BOOL (^)(void))_validateThreadBlock {
     if (self = [super initWithAPI:kEAGLRenderingAPIOpenGLES2]) {
         name = _name;
         validateThreadBlock = _validateThreadBlock;
@@ -241,7 +241,7 @@ typedef enum UndfBOOL {
     return self;
 }
 
-- (id)initWithName:(NSString*)_name andSharegroup:(EAGLSharegroup*)sharegroup andValidateThreadWith:(BOOL (^)())_validateThreadBlock {
+- (id)initWithName:(NSString*)_name andSharegroup:(EAGLSharegroup*)sharegroup andValidateThreadWith:(BOOL (^)(void))_validateThreadBlock {
     if (self = [super initWithAPI:kEAGLRenderingAPIOpenGLES2 sharegroup:sharegroup]) {
         name = _name;
         validateThreadBlock = _validateThreadBlock;
@@ -332,7 +332,7 @@ typedef enum UndfBOOL {
     }
 }
 
-- (void)runBlock:(void (^)())block withScissorRect:(CGRect)scissorRect {
+- (void)runBlock:(void (^)(void))block withScissorRect:(CGRect)scissorRect {
     [self runBlock:^{
 
         if (!CGRectEqualToRect(scissorRect, CGRectZero)) {
@@ -353,7 +353,7 @@ typedef enum UndfBOOL {
 }
 
 
-- (void)runBlockAndMaintainCurrentFramebuffer:(void (^)())block {
+- (void)runBlockAndMaintainCurrentFramebuffer:(void (^)(void))block {
     [self runBlock:^{
         GLint currBoundFrBuff = -1;
         glGetIntegerv(GL_FRAMEBUFFER_BINDING, &currBoundFrBuff);
@@ -625,25 +625,17 @@ typedef enum UndfBOOL {
 
 - (void)glTexParameteriWithPname:(GLenum)pname param:(GLint)param {
     if (pname == GL_TEXTURE_MIN_FILTER) {
-        if (YES || param != texparam_GL_TEXTURE_MIN_FILTER) {
-            texparam_GL_TEXTURE_MIN_FILTER = param;
-            glTexParameteri(GL_TEXTURE_2D, pname, param);
-        }
+        texparam_GL_TEXTURE_MIN_FILTER = param;
+        glTexParameteri(GL_TEXTURE_2D, pname, param);
     } else if (pname == GL_TEXTURE_MAG_FILTER) {
-        if (YES || param != texparam_GL_TEXTURE_MAG_FILTER) {
-            texparam_GL_TEXTURE_MAG_FILTER = param;
-            glTexParameteri(GL_TEXTURE_2D, pname, param);
-        }
+        texparam_GL_TEXTURE_MAG_FILTER = param;
+        glTexParameteri(GL_TEXTURE_2D, pname, param);
     } else if (pname == GL_TEXTURE_WRAP_S) {
-        if (YES || param != texparam_GL_TEXTURE_WRAP_S) {
-            texparam_GL_TEXTURE_WRAP_S = param;
-            glTexParameteri(GL_TEXTURE_2D, pname, param);
-        }
+        texparam_GL_TEXTURE_WRAP_S = param;
+        glTexParameteri(GL_TEXTURE_2D, pname, param);
     } else if (pname == GL_TEXTURE_WRAP_T) {
-        if (YES || param != texparam_GL_TEXTURE_WRAP_T) {
-            texparam_GL_TEXTURE_WRAP_T = param;
-            glTexParameteri(GL_TEXTURE_2D, pname, param);
-        }
+        texparam_GL_TEXTURE_WRAP_T = param;
+        glTexParameteri(GL_TEXTURE_2D, pname, param);
     } else {
         @throw [NSException exceptionWithName:@"TextureParamException" reason:@"Unknown texture parameter" userInfo:nil];
     }
@@ -652,7 +644,7 @@ typedef enum UndfBOOL {
 
 #pragma mark - Stencil
 
-- (void)runBlock:(void (^)())block
+- (void)runBlock:(void (^)(void))block
 forStenciledPath:(UIBezierPath*)clippingPath
             atP1:(CGPoint)p1
            andP2:(CGPoint)p2
