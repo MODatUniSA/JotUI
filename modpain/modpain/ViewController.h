@@ -27,7 +27,7 @@
     BOOL textureActive;
     Highlighter* highlighter;
 
-    UIViewController* popoverController;
+    UIPopoverController* popoverController;
 
     IBOutlet UISegmentedControl* pressureVsVelocityControl;
     IBOutlet UISegmentedControl* penVsMarkerControl;
