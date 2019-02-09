@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		05343628204CED6F00B666BE /* charcoal.png in Resources */ = {isa = PBXBuildFile; fileRef = 05343627204CED6F00B666BE /* charcoal.png */; };
-		05AD04A3204E7C0F007CACEE /* charcoal.png in Resources */ = {isa = PBXBuildFile; fileRef = 05AD04A2204E7C0F007CACEE /* charcoal.png */; };
 		05E812152057A4D800BA6F97 /* Rene Bieder - Galano Grotesque Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 05E812132057A4D700BA6F97 /* Rene Bieder - Galano Grotesque Bold.otf */; };
 		05E812162057A4D800BA6F97 /* Linotype - Neue Haas Grotesk Display Pro 55 Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05E812142057A4D700BA6F97 /* Linotype - Neue Haas Grotesk Display Pro 55 Roman.ttf */; };
 		66018A4819F61F4400228A0D /* DeleteAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 66018A4719F61F4400228A0D /* DeleteAssets.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -669,7 +668,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Milestone Made";
 			};
 			buildConfigurationList = 669B399F1692B46A00F12F42 /* Build configuration list for PBXProject "JotUI" */;
@@ -678,6 +677,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 669B399A1692B46A00F12F42;
 			productRefGroup = 669B39AA1692B46A00F12F42 /* Products */;
@@ -703,7 +703,6 @@
 				05343628204CED6F00B666BE /* charcoal.png in Resources */,
 				C518C87D1C841F0700F1895C /* highlighter.png in Resources */,
 				C53F80921D6FE73E00BA9A58 /* quad.fsh in Resources */,
-				05AD04A3204E7C0F007CACEE /* charcoal.png in Resources */,
 				C53F808F1D6FE73E00BA9A58 /* colorlesspoint.vsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -869,6 +868,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				STRIP_INSTALLED_PRODUCT = NO;
 			};
