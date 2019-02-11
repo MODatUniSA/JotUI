@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eU2-cL-jCf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eU2-cL-jCf">
     <device id="ipad12_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -442,7 +441,7 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" restorationIdentifier="brushOpacitySlider" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.25" minValue="0.01" maxValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hiz-67-CVg">
-                                <rect key="frame" x="-181" y="498" width="454" height="30"/>
+                                <rect key="frame" x="-181" y="497.5" width="454" height="30"/>
                                 <color key="tintColor" red="0.62745098040000002" green="0.25098039220000001" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="TG4-oh-s9B"/>
@@ -721,11 +720,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can MOD. please project your image in our gallery?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhp-k4-Qu4">
-                                <rect key="frame" x="216" y="448" width="934" height="191"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhp-k4-Qu4">
+                                <rect key="frame" x="140" y="448" width="1086" height="238"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="191" id="0Mb-DO-JeZ"/>
                                 </constraints>
+                                <string key="text">Do you wish to submit your drawing to MOD.?  We may use your drawing, for example, in our galleries, on our website, or for social media.</string>
                                 <fontDescription key="fontDescription" name="NHaasGroteskDSPro-55Rg" family="Neue Haas Grotesk Display Pro" pointSize="52"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -751,81 +751,66 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebA-VD-7xa">
-                                <rect key="frame" x="216" y="679" width="934" height="130"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sB-Gg-RDm">
-                                        <rect key="frame" x="8" y="40" width="250" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="3rf-TT-CrA"/>
-                                            <constraint firstAttribute="height" constant="50" id="i20-2U-mer"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="No thanks">
-                                            <color key="titleColor" red="0.62745098040000002" green="0.25098039220000001" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="PermissionNotGiven:" destination="skz-rk-LF7" eventType="touchUpInside" id="Aqc-LO-seQ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9R-hD-dnx">
-                                        <rect key="frame" x="676" y="40" width="250" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="Lfg-NW-zvW"/>
-                                            <constraint firstAttribute="height" constant="50" id="sbU-LJ-g6f"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="Yeah sure">
-                                            <color key="titleColor" red="0.62745098040000002" green="0.25098039220000001" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="PermissionGiven:" destination="skz-rk-LF7" eventType="touchUpInside" id="4EG-hm-F78"/>
-                                            <segue destination="ISg-8B-gD6" kind="presentation" id="7WT-0E-FBf"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                                <rect key="frame" x="216" y="726" width="934" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="B9V-TF-li5"/>
-                                    <constraint firstItem="5sB-Gg-RDm" firstAttribute="centerY" secondItem="ebA-VD-7xa" secondAttribute="centerY" id="O9R-bI-qCF"/>
-                                    <constraint firstItem="T9R-hD-dnx" firstAttribute="centerY" secondItem="ebA-VD-7xa" secondAttribute="centerY" id="UNO-iz-Z4e"/>
-                                    <constraint firstAttribute="trailing" secondItem="T9R-hD-dnx" secondAttribute="trailing" constant="8" id="gqX-RH-yIa"/>
-                                    <constraint firstItem="5sB-Gg-RDm" firstAttribute="leading" secondItem="ebA-VD-7xa" secondAttribute="leading" constant="8" id="oJc-hw-lkK"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll only use your image in this exhibition and no other use." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKc-Oh-nPl">
-                                <rect key="frame" x="301" y="839" width="764" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5sB-Gg-RDm">
+                                <rect key="frame" x="224" y="806" width="250" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="3El-NQ-Nc7"/>
+                                    <constraint firstAttribute="width" constant="250" id="3rf-TT-CrA"/>
+                                    <constraint firstAttribute="height" constant="50" id="i20-2U-mer"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="NHaasGroteskDSPro-55Rg" family="Neue Haas Grotesk Display Pro" pointSize="27"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="No thanks">
+                                    <color key="titleColor" red="0.62745098040000002" green="0.25098039220000001" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="PermissionNotGiven:" destination="skz-rk-LF7" eventType="touchUpInside" id="Aqc-LO-seQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9R-hD-dnx">
+                                <rect key="frame" x="892" y="806" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Lfg-NW-zvW"/>
+                                    <constraint firstAttribute="height" constant="50" id="sbU-LJ-g6f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Yeah sure">
+                                    <color key="titleColor" red="0.62745098040000002" green="0.25098039220000001" blue="0.64313725489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="PermissionGiven:" destination="skz-rk-LF7" eventType="touchUpInside" id="4EG-hm-F78"/>
+                                    <segue destination="ISg-8B-gD6" kind="presentation" id="7WT-0E-FBf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="VgW-YW-VL5" firstAttribute="trailing" secondItem="wKc-Oh-nPl" secondAttribute="trailing" constant="301" id="04V-oO-MEt"/>
-                            <constraint firstItem="wKc-Oh-nPl" firstAttribute="top" secondItem="ebA-VD-7xa" secondAttribute="bottom" constant="30" id="Dyq-3f-D46"/>
                             <constraint firstItem="k2e-4d-4Ug" firstAttribute="leading" secondItem="VgW-YW-VL5" secondAttribute="leading" constant="20" id="La2-LY-vcd"/>
                             <constraint firstItem="VgW-YW-VL5" firstAttribute="trailing" secondItem="ZcM-TA-ZG2" secondAttribute="trailing" constant="20" id="TGP-wX-4S7"/>
                             <constraint firstItem="34e-zh-Tw1" firstAttribute="top" secondItem="VgW-YW-VL5" secondAttribute="top" constant="34" id="TRH-xh-9z3"/>
-                            <constraint firstItem="wKc-Oh-nPl" firstAttribute="leading" secondItem="VgW-YW-VL5" secondAttribute="leading" constant="301" id="YgD-dH-PDI"/>
+                            <constraint firstItem="T9R-hD-dnx" firstAttribute="centerY" secondItem="MZC-OW-mJT" secondAttribute="centerY" constant="319" id="YGw-M9-bhU"/>
                             <constraint firstItem="ebA-VD-7xa" firstAttribute="top" secondItem="hhp-k4-Qu4" secondAttribute="bottom" constant="40" id="bOC-5P-YFW"/>
-                            <constraint firstItem="VgW-YW-VL5" firstAttribute="trailing" secondItem="hhp-k4-Qu4" secondAttribute="trailing" constant="216" id="bZx-PY-lGy"/>
+                            <constraint firstItem="VgW-YW-VL5" firstAttribute="trailing" secondItem="hhp-k4-Qu4" secondAttribute="trailing" constant="140" id="bZx-PY-lGy"/>
                             <constraint firstItem="hhp-k4-Qu4" firstAttribute="top" secondItem="ZcM-TA-ZG2" secondAttribute="bottom" constant="60" id="cI6-Tc-XTZ"/>
                             <constraint firstItem="ebA-VD-7xa" firstAttribute="leading" secondItem="VgW-YW-VL5" secondAttribute="leading" constant="216" id="cSJ-F7-xKh"/>
                             <constraint firstItem="ZcM-TA-ZG2" firstAttribute="leading" secondItem="VgW-YW-VL5" secondAttribute="leading" constant="20" id="dUW-6j-q36"/>
-                            <constraint firstItem="hhp-k4-Qu4" firstAttribute="leading" secondItem="VgW-YW-VL5" secondAttribute="leading" constant="216" id="ffi-hf-e6D"/>
+                            <constraint firstItem="5sB-Gg-RDm" firstAttribute="centerY" secondItem="MZC-OW-mJT" secondAttribute="centerY" constant="319" id="fHw-jP-qMm"/>
+                            <constraint firstItem="hhp-k4-Qu4" firstAttribute="leading" secondItem="VgW-YW-VL5" secondAttribute="leading" constant="140" id="ffi-hf-e6D"/>
                             <constraint firstItem="k2e-4d-4Ug" firstAttribute="top" secondItem="VgW-YW-VL5" secondAttribute="top" constant="130" id="g5k-2k-N59"/>
                             <constraint firstItem="ZcM-TA-ZG2" firstAttribute="top" secondItem="k2e-4d-4Ug" secondAttribute="bottom" constant="8" id="geT-F6-dec"/>
                             <constraint firstItem="VgW-YW-VL5" firstAttribute="trailing" secondItem="ebA-VD-7xa" secondAttribute="trailing" constant="216" id="jTJ-jy-5Px"/>
+                            <constraint firstItem="5sB-Gg-RDm" firstAttribute="leading" secondItem="MZC-OW-mJT" secondAttribute="leading" constant="224" id="o6M-30-rBP"/>
                             <constraint firstItem="VgW-YW-VL5" firstAttribute="trailing" secondItem="34e-zh-Tw1" secondAttribute="trailing" constant="35" id="pGt-Hl-jog"/>
+                            <constraint firstAttribute="trailing" secondItem="T9R-hD-dnx" secondAttribute="trailing" constant="224" id="pU3-rG-1rQ"/>
                             <constraint firstItem="VgW-YW-VL5" firstAttribute="trailing" secondItem="k2e-4d-4Ug" secondAttribute="trailing" constant="20" id="u6Q-y3-Ik8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VgW-YW-VL5"/>
                     </view>
                     <connections>
                         <outlet property="permissionPageBodyText" destination="hhp-k4-Qu4" id="oev-nn-wWS"/>
-                        <outlet property="permissionPageDescriptionText" destination="wKc-Oh-nPl" id="xA6-yj-Ek8"/>
                         <outlet property="permissionPageEmoji" destination="k2e-4d-4Ug" id="b2x-rg-ENv"/>
                         <outlet property="permissionPageNoButton" destination="5sB-Gg-RDm" id="zPe-i1-go6"/>
                         <outlet property="permissionPageTitle" destination="ZcM-TA-ZG2" id="BzZ-ka-67x"/>
@@ -834,7 +819,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DuS-ng-yVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="699.609375" y="-644.36310395314786"/>
+            <point key="canvasLocation" x="699.26793557833082" y="-644.53125"/>
         </scene>
         <!--Submit View Controller-->
         <scene sceneID="JDQ-wc-VQZ">

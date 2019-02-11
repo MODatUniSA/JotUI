@@ -36,7 +36,7 @@
         [self.permissionPageEmoji setText:@"😎"];
     }
     [self.permissionPageTitle setText:@"Thank you!"];
-    [self.permissionPageBodyText setText:@"Thanks for drawing. We haven't saved your image so won't be using it anywhere."];
+    [self.permissionPageBodyText setText:@"Thanks for drawing. We haven't saved your image so we won't be using it anywhere."];
     [self.permissionPageNoButton removeFromSuperview];
     [self.permissionPageYesButton removeFromSuperview];
 //    [self.permissionPageDescriptionText setText:@"You're welcome to delete your image using the trash can on the top right."];
